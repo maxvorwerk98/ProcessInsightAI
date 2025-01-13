@@ -1,2 +1,2 @@
 # InsightProcessAI
-InsightProcessAI ist ein KI-gestütztes Tool zur Analyse und von Prozessen.
+InsightProcessAI ist ein LLM-gestütztes Tool zur Analyse und von Prozessen auf basis von Event-Logs.
