@@ -3,6 +3,7 @@
 #-----------------------------------------------------------------------------
 
 import pandas
+import pm4py
 
 #-----------------------------------------------------------------------------
 # Load Event-Logs
@@ -10,7 +11,7 @@ import pandas
 
 def load_event_logs(file_path):
     try:
-        event_logs = pandas.read_csv(file_path)
+        event_logs = pm4py.read_csv(file_path)
         formatted_event_logs = formatting_event_logs(event_logs)
         return formatted_event_logs
     except Exception as exception:

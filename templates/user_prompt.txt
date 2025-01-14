@@ -1,5 +1,0 @@
-Event-Logs:
-
-{event_logs}
-
-Bitte beschreibe basierend auf diesen Event-Logs den grundlegenden Ablauf des Prozesses und identifiziere die wichtigsten Schritte. Ergänze dabei relevante Details, die den Prozess klarer strukturieren und Hauptaktivitäten hervorheben.

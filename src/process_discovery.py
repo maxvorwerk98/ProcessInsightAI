@@ -23,11 +23,11 @@ model_name = "gpt-4o-mini"
 
 def process_discovery(formatted_event_logs):
 
-    with open("templates/system_prompt.txt", "r", encoding="utf-8") as file:
+    with open("prompts/system_prompt.txt", "r", encoding="utf-8") as file:
         system_prompt = file.read()
 
-    with open("templates/user_prompt.txt", "r", encoding="utf-8") as file:
-        user_prompt = file.read().format(event_logs=formatted_event_logs)
+    with open("prompts/user_discovery_prompt.txt", "r", encoding="utf-8") as file:
+        user_discovery_prompt = file.read().format(event_logs=formatted_event_logs)
 
     response = client.chat.completions.create(
         model=model_name,
@@ -36,7 +36,7 @@ def process_discovery(formatted_event_logs):
                 "role": "system", "content": system_prompt  
             },
             {
-                "role": "user", "content": user_prompt
+                "role": "user", "content": user_discovery_prompt
             }
         ]
     )
