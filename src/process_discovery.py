@@ -15,7 +15,7 @@ load_dotenv(dotenv_path='config/.env')
 
 client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 
-model_name = "gpt-4o"
+model_name = "gpt-4o-mini"
 
 #-----------------------------------------------------------------------------
 # Process Discovery
@@ -42,4 +42,6 @@ def process_discovery(formatted_event_logs):
     )
 
     with open("output/process_discovery_output.txt", "w", encoding="utf-8") as file:
-        file.write(response["choices"][0]["message"]["content"])
+        file.write(response.choices[0].message.content)
+
+    print("Process-Discovery erfolgreich durchgeführt.")
