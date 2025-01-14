@@ -43,7 +43,5 @@ def process_discovery(formatted_event_logs):
         ]
     )
 
-    with open("chatgpt_response.txt", "w", encoding="utf-8") as file:
+    with open("process_discovery_output.txt", "w", encoding="utf-8") as file:
         file.write(response["choices"][0]["message"]["content"])
-
-    return response["choices"][0]["message"]["content"]
