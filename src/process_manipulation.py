@@ -6,13 +6,13 @@ import pandas
 import pm4py
 
 #-----------------------------------------------------------------------------
-# Load Event-Logs
+# Manipulate Event-Logs
 #-----------------------------------------------------------------------------
 
-def load_event_logs(file_path):
-    
+def manipulate_event_logs(event_logs):
+
     try:
-        event_logs = pm4py.read_csv(file_path)
-        return event_logs
+        manipulated_event_logs = event_logs[["case:concept:name", "concept:name", "time:timestamp"]]
+        return manipulated_event_logs
     except Exception as exception:
-        raise ValueError(f"Fehler beim Laden der Event-Logs: {exception}")
+        raise ValueError(f"Fehler beim Reduzieren der Event-Logs: {exception}")

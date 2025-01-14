@@ -14,6 +14,7 @@
 #-----------------------------------------------------------------------------
 
 from src.process_input import load_event_logs
+from src.process_manipulation import manipulate_event_logs
 from src.process_discovery import process_discovery
 
 #-----------------------------------------------------------------------------
@@ -24,16 +25,24 @@ def main():
 
     file_path = "input/data_claim-process.csv"
 
+#-----------------------------------------------------------------------------
+
     try:
-        formatted_event_logs = load_event_logs(file_path)
+        event_logs = load_event_logs(file_path)
         print("Event-Logs erfolgreich geladen.")
     except ValueError as exception:
         print(exception)
 
+#-----------------------------------------------------------------------------
+
     try:
-        process_discovery(formatted_event_logs)
+        manipulate_event_logs(event_logs)
+        process_discovery(event_logs)
+        print("Process-Discovery erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
+
+#-----------------------------------------------------------------------------
 
 if __name__ == "__main__":
     main()
