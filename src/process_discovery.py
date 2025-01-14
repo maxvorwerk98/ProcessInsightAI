@@ -23,7 +23,7 @@ model_name = "gpt-4o"
 
 def process_discovery(formatted_event_logs):
 
-    with open("/templates/system_prompt.txt", "r", encoding="utf-8") as file:
+    with open("templates/system_prompt.txt", "r", encoding="utf-8") as file:
         system_prompt = file.read()
 
     with open("templates/user_prompt.txt", "r", encoding="utf-8") as file:
@@ -43,5 +43,5 @@ def process_discovery(formatted_event_logs):
         ]
     )
 
-    with open("process_discovery_output.txt", "w", encoding="utf-8") as file:
+    with open("output/process_discovery_output.txt", "w", encoding="utf-8") as file:
         file.write(response["choices"][0]["message"]["content"])

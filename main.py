@@ -22,15 +22,13 @@ from src.process_discovery import process_discovery
 
 def main():
 
-    file_path = "/input/data_claim-process.csv"
+    file_path = "input/data_claim-process.csv"
 
     try:
-        print("1")
         formatted_event_logs = load_event_logs(file_path)
         print("Event-Logs erfolgreich geladen:")
         print(formatted_event_logs.head())
     except ValueError as exception:
-        print("2")
         print(exception)
 
     try:
