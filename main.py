@@ -26,8 +26,7 @@ def main():
 
     try:
         formatted_event_logs = load_event_logs(file_path)
-        print("Event-Logs erfolgreich geladen:")
-        print(formatted_event_logs.head())
+        print("Event-Logs erfolgreich geladen.")
     except ValueError as exception:
         print(exception)
 
@@ -35,3 +34,6 @@ def main():
         process_discovery(formatted_event_logs)
     except ValueError as exception:
         print(exception)
+
+if __name__ == "__main__":
+    main()

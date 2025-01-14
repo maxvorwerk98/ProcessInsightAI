@@ -33,12 +33,10 @@ def process_discovery(formatted_event_logs):
         model=model_name,
         messages=[
             {
-                "role": "system",
-                "content": [{"type": "text", "text": system_prompt}]
+                "role": "system", "content": system_prompt  
             },
             {
-                "role": "user",
-                "content": [{"type": "text", "text": user_prompt}]
+                "role": "user", "content": user_prompt
             }
         ]
     )
