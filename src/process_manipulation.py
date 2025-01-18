@@ -2,7 +2,6 @@
 # Import
 #-----------------------------------------------------------------------------
 
-import pandas
 import pm4py
 
 #-----------------------------------------------------------------------------
@@ -12,7 +11,7 @@ import pm4py
 def manipulate_event_logs(event_logs):
 
     try:
-        manipulated_event_logs = event_logs[["case:concept:name", "concept:name", "time:timestamp"]]
+        net, initial_marking, final_marking = alpha_miner.apply(event_logs)
         return manipulated_event_logs
     except Exception as exception:
-        raise ValueError(f"Fehler beim Reduzieren der Event-Logs: {exception}")
+        raise ValueError(f"Fehler beim manipulieren der Event-Logs: {exception}")
