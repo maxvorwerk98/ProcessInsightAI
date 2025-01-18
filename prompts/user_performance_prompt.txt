@@ -1,0 +1,1 @@
+Identifiziere die Prozessschritte mit den längsten Durchlaufzeiten und analysiere, ob diese als Engpässe im Prozessfluss betrachtet werden können.

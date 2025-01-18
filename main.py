@@ -14,7 +14,6 @@
 #-----------------------------------------------------------------------------
 
 from src.process_input import load_event_logs
-from src.process_manipulation import manipulate_event_logs
 from src.process_discovery import process_discovery
 
 #-----------------------------------------------------------------------------
@@ -23,7 +22,7 @@ from src.process_discovery import process_discovery
 
 def main():
 
-    file_path = "input/data_claim-process.xes"
+    file_path = "input/data_claim_process.xes"
 
 #-----------------------------------------------------------------------------
 

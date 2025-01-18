@@ -16,7 +16,7 @@ load_dotenv(dotenv_path='config/.env')
 
 client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 
-model_name = "gpt-4o-mini"
+model_name = "gpt-4"
 
 #-----------------------------------------------------------------------------
 # Process Discovery
@@ -24,8 +24,7 @@ model_name = "gpt-4o-mini"
 
 def process_discovery(event_logs):
 
-    net, initial_marking, final_marking = pm4py.discover_petri_net_alpha(event_logs)
-    pm4py.write_pnml(net, initial_marking, final_marking, "output/petri_net.pnml")
+    net, im, fm = pm4py.discover_petri_net_inductive(event_logs)
 
     with open("output/petri_net.pnml", "r", encoding="utf-8") as file:
         petri_net = file.read()
@@ -40,7 +39,7 @@ def process_discovery(event_logs):
         model=model_name,
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_discovery_prompt + "\n\n" + petri_net}
+            {"role": "user", "content": user_discovery_prompt + "\n\n" + pm4py.llm.abstract_petri_net(net, im, fm )}
         ]
     )
 
