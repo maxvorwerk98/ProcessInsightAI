@@ -3,6 +3,7 @@
 #-----------------------------------------------------------------------------
 
 import os
+import pm4py
 
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -27,7 +28,7 @@ def process_discovery(event_logs):
         system_prompt = file.read()
 
     with open("prompts/user_discovery_prompt.txt", "r", encoding="utf-8") as file:
-        user_discovery_prompt = file.read().format(event_logs=event_logs)
+        user_discovery_prompt = file.read()
 
     response = client.chat.completions.create(
         model=model_name,
@@ -36,7 +37,7 @@ def process_discovery(event_logs):
                 "role": "system", "content": system_prompt  
             },
             {
-                "role": "user", "content": user_discovery_prompt
+                "role": "user", "content": user_discovery_prompt + pm4py.discover_petri_net_alpha(event_logs)
             }
         ]
     )

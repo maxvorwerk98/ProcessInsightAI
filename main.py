@@ -23,7 +23,7 @@ from src.process_discovery import process_discovery
 
 def main():
 
-    file_path = "input/data_claim-process.csv"
+    file_path = "input/data_hospital-sepsis-process.xes"
 
 #-----------------------------------------------------------------------------
 
