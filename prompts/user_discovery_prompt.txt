@@ -1,1 +1,1 @@
-Bitte beschreibe basierend auf dem Petri-Netz den grundlegenden Ablauf des Prozesses.
+Bitte beschreibe basierend auf dem folgendem Petri-Netz den grundlegenden Ablauf des Prozesses.

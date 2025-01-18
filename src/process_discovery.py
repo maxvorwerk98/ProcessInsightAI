@@ -24,6 +24,12 @@ model_name = "gpt-4o-mini"
 
 def process_discovery(event_logs):
 
+    net, initial_marking, final_marking = pm4py.discover_petri_net_alpha(event_logs)
+    pm4py.write_pnml(net, initial_marking, final_marking, "output/petri_net.pnml")
+
+    with open("output/petri_net.pnml", "r", encoding="utf-8") as file:
+        petri_net = file.read()
+
     with open("prompts/system_prompt.txt", "r", encoding="utf-8") as file:
         system_prompt = file.read()
 
@@ -33,12 +39,8 @@ def process_discovery(event_logs):
     response = client.chat.completions.create(
         model=model_name,
         messages=[
-            {
-                "role": "system", "content": system_prompt  
-            },
-            {
-                "role": "user", "content": user_discovery_prompt + pm4py.discover_petri_net_alpha(event_logs)
-            }
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_discovery_prompt + "\n\n" + petri_net}
         ]
     )
 

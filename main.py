@@ -36,7 +36,6 @@ def main():
 #-----------------------------------------------------------------------------
 
     try:
-        manipulate_event_logs(event_logs)
         process_discovery(event_logs)
         print("Process-Discovery erfolgreich durchgeführt.")
     except ValueError as exception:
