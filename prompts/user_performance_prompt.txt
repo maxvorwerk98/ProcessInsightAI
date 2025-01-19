@@ -1,1 +1,20 @@
-Identifiziere die Prozessschritte mit den längsten Durchlaufzeiten und analysiere, ob diese als Engpässe im Prozessfluss betrachtet werden können.
+Bitte analysiere basierend auf dem folgendem Directly-Follows-Graph die durschnittliche Durchlaufzeit zwischen den einzelnen Aktivitäten. 
+
+**Datenstruktur:**
+- Übergänge: Die Beziehungen zwischen Aktivitäten, die direkt aufeinander folgen.
+- Frequency: Die Anzahl der Vorkommen jedes Übergangs im Prozess.
+- Performance: Die durchschnittliche Durchlaufzeit für jeden Übergang in Sekunden.
+
+**Directly-Follows-Graph:**
+<<DFG-Abstraction>>
+
+**Aufgabe:**
+1. Identifiziere die 5 Übergänge mit den höchsten Performance-Werten: Dies sind die Übergänge mit der längsten durchschnittlichen Durchlaufzeit.
+2. Bewerte, ob diese Übergänge potenzielle Engpässe im Prozess darstellen: Berücksichtige die `frequency` und die relative Position im Prozess. Ein Übergang mit hoher `performance` und gleichzeitig hoher `frequency` ist wahrscheinlicher ein Engpass als ein Übergang, der selten auftritt.
+
+**Ergebnisformat**
+Gib die Ergebnisse in einer strukturierten Liste aus, wie folgt:
+- Übergang: [Name der beiden Aktivitäten]
+- Durchschnittliche Durchlaufzeit (performance): [Wert in Stunden]
+- Häufigkeit (frequency): [Wert]
+- Bewertung: [Engpass ja/nein + Begründung]

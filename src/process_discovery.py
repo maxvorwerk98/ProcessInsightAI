@@ -26,16 +26,15 @@ def process_discovery(event_logs):
 
     net, im, fm = pm4py.discover_petri_net_inductive(event_logs)
 
-    with open("prompts/system_prompt.txt", "r", encoding="utf-8") as file:
-        system_prompt = file.read()
-
     with open("prompts/user_discovery_prompt.txt", "r", encoding="utf-8") as file:
         user_discovery_prompt = file.read()
+
+    user_discovery_prompt = user_discovery_prompt.replace("<<Petri-Netz>>", pm4py.llm.abstract_petri_net(net, im, fm))
 
     response = client.chat.completions.create(
         model=model_name,
         messages=[
-            {"role": "user", "content": user_discovery_prompt + "\n\n" + pm4py.llm.abstract_petri_net(net, im, fm)}
+            {"role": "user", "content": user_discovery_prompt}
         ]
     )
 

@@ -1,23 +1,14 @@
-Basierend auf den bereitgestellten Petri-Netz-Informationen kann der grundlegende Ablauf des Prozesses wie folgt beschrieben werden:
+Basierend auf dem Petri-Netz sehen wir, dass es eine klare Reihenfolge von Übergängen ergibt, die den am häufigsten vorkommenden Ablauf ("Happy-Path") bilden. Dieser ist wie folgt:
 
-1. Der Prozess beginnt mit der "First Notification of Loss (FNOL)", die durch das Event 0061c2af-3b98-4b8c-a104-6fc5c29e36fe erfasst wird. Dieser Schritt markiert den Beginn des Prozesses und führt zu vier Möglichkeiten.
+- "First Notification of Loss (FNOL)"
+- "Set Reserve"
+- "Assign Claim"
+- "Claim Decision"
+- "Payment Sent"
+- "Close Claim"
 
-    a. Ein Übergang zu Platz p_11, der zur "Claim Decision" führt (Event: 52a6c77f-b3b6-4021-a1b9-57b06292bc83).
-    
-    b. Ein Übergang zu Platz p_13, der die Zuweisung des "Assign Claim" (Event: d701dd1a-fee2-43e7-bb6a-a507fcf39d02) einleitet.
-    
-    c. Ein Übergang zu Platz p_4, der auf die Ausführung der Aktion "Payment Sent" (Event: 23ed1b6f-903e-4d6c-83f1-ebf3bb041c0a) führt.
-    
-    d. Ein Weg zu Platz p_6, wo "Set Reserve" (Event: 6388f23a-8ccd-4ef1-b664-199ac18bf8eb) ausgeführt wird.
-    
-2. Entscheidung über den Anspruch ("Claim Decision"): Dieser Schritt wird am Platz p_11 initiiert und führt zu Platz p_12. Nach dieser Entscheidung wird der Anspruch geschlossen ("Close Claim": fb6ce3b8-4de1-4e16-9d2d-d94501842513).
+**Happy-Path:** "First Notification of Loss (FNOL)" -> "Set Reserve" -> "Assign Claim" -> "Claim Decision" -> "Payment Sent" -> "Close Claim"
 
-3. Anspruch zuweisen ("Assign Claim"): Diese Aktion beginnt bei Platz p_13 und führt zu Platz p_14. Nach der Zuweisung wird der Anspruch ebenfalls geschlossen ("Close Claim": fb6ce3b8-4de1-4e16-9d2d-d94501842513).
+**Bedingungen:** Zunächst muss eine erste Benachrichtigung über den Verlust ("First Notification of Loss (FNOL)") erfolgen. Diese führt zu den Zuständen p_11, p_13, p_4 und p_6. Der nächste Schritt ist das Setzen einer Reserve ("Set Reserve"). Dieser Übergang benötigt den Zustand p_6 und führt zum Zustand p_7. Anschließend wird ein Anspruch zugewiesen ("Assign Claim"). Dafür wird der Zustand p_13 benötigt und es wird der Zustand p_14 erreicht. Danach folgt die Entscheidung über den Anspruch ("Claim Decision"). Hierfür ist der Zustand p_11 nötig und es resultiert der Zustand p_12. Als nächstes wird eine Zahlung gesendet ("Payment Sent"). Dafür ist der Zustand p_4 erforderlich und es folgt der Zustand p_5. Schließlich wird der Anspruch abgeschlossen ("Close Claim"). Dieser Schritt benötigt die Zustände p_12 und p_14 und führt zum Zustand p_9.
 
-4. Zahlung versenden ("Payment Sent"): Dieser Weg beginnt bei Platz p_4 und endet bei Platz p_5. Nachdem die Zahlung gesendet wurde, führt der Prozess zur Schlussmarkierung am "sink".
-
-5. Reserve setzen ("Set Reserve"): Diese Aktion startet an Platz p_6 und endet an Platz p_7. Nach dem Setzen der Reserve erfolgt auch hier der Übergang zur Schlussmarkierung.
-
-6. Der Prozess endet, wenn alle Pfade zur Schlussmarkierung "sink" geführt haben. Hierbei handelt es sich um das Event (tauJoin_2), das alle vorherigen Aktionen zusammenfasst und den Prozess abschließt.
-
-Dieser Prozessfluss zeigt eine Versicherungsclaim-Verarbeitung, in der mehrere mögliche Aktionen ausgeführt werden können, und all diese einzelnen Stränge führen schließlich zur Schließung des Anspruchs.
+Jeder dieser Übergänge sehr sequenziell, d.h. nacheinander und ohne Verzweigungen, auszuführen. Am Ende wird der Endzustand "sink" erreicht, wodurch der Ablauf abgeschlossen ist.
