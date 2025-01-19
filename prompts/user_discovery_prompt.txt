@@ -1,15 +1,12 @@
 Bitte beschreibe basierend auf dem folgenden Petri-Netz den häufigsten Ablauf des Prozesses (Happy-Path). 
 
 **Petri-Netz:**
-<<Petri-Netz>>
+<<Petri-Net>>
 
 **Aufgabe:**
 1. Identifiziere den Happy-Path des Prozesses, also die am häufigsten vorkommende Reihenfolge von Aktivitäten.  
 2. Beschreibe den Ablauf des Happy-Path ohne auf alternative Varianten einzugehen.  
 
 **Ergebnisformat:**
-- **Happy-Path:** Kurzbeschreibung des häufigsten Prozessablaufs, z. B. "Aktivität A -> Aktivität B -> Aktivität C".  
-- **Bedingungen:** Beschreibe, welche Zustände und Übergänge erforderlich sind, um diesen Ablauf zu durchlaufen.  
-
-
-
+- Happy-Path: Kurzbeschreibung des häufigsten Prozessablaufs, z. B. "Aktivität A -> Aktivität B -> Aktivität C".  
+- Bedingungen: Beschreibe, welche Zustände und Übergänge erforderlich sind, um diesen Ablauf zu durchlaufen.  

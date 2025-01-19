@@ -16,6 +16,7 @@
 from src.process_input import load_event_logs
 from src.process_discovery import process_discovery
 from src.process_performance import process_performance
+from src.process_technology import process_technology
 
 #-----------------------------------------------------------------------------
 # Main
@@ -36,7 +37,7 @@ def main():
 #-----------------------------------------------------------------------------
 
     try:
-        process_discovery(event_logs)
+        #process_discovery(event_logs)
         print("Process-Discovery erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
@@ -48,16 +49,6 @@ def main():
         print("Process-Performance-Analysis erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
-
-#-----------------------------------------------------------------------------
-
-    try:
-        process_performance(event_logs)
-        print("Process-Performance-Analysis erfolgreich durchgeführt")
-    except ValueError as exception:
-        print(exception)
-
-#-----------------------------------------------------------------------------
 
 if __name__ == "__main__":
     main()

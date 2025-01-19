@@ -1,0 +1,11 @@
+Bitte analysiere basierend auf den ergebnissen der Performance-Analyse und der folgenden Event-Logs die Gründe für die langen Durchlaufzeiten im Prozess. Prüfe ob die verschiedenen Attribute wie beispielsweise die Schadenhöhe auswirkungen auf lange Durchlaufzeiten haben.
+
+**Event-Logs:**
+<<Process-Variants>>
+
+**Aufgabe:**
+1. Analysiere die Hauptursachen für die langen Durchlaufzeiten.
+
+**Ergebnisformat:**
+Gib die Ergebnisse in einer strukturierten Liste aus, wie folgt:
+- Ursachen: Liste der Hauptgründe für Verzögerungen

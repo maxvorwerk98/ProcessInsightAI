@@ -1,11 +1,33 @@
-1. **Happy-Path:** 
-  'First Notification of Loss (FNOL)' -> 'Payment Sent' -> 'Set Reserve' -> 'Assign Claim' -> 'Claim Decision' -> 'Close Claim'
+Aufgrund der zur Verfügung gestellten Daten können wir den „Happy Path“, also die am häufigsten vorkommende Reihenfolge von Aktivitäten, nicht explizit identifizieren. Die Häufigkeit eines Prozesspfads hängt von den realen Ausführungsdaten ab und nicht von der Petri-Netzstruktur allein. 
 
-2. **Bedingungen:**
-  - Der Prozess startet bei der 'First Notification of Loss (FNOL)'. Die Verlustmeldung wird an den Plätzen p_11, p_13, p_4 und p_6 zur weiteren Bearbeitung verteilt.
-  - Ausgehend von p_4 wird die 'Payment Sent' Aktion ausgeführt, was den Zustand zu p_5 ändert.
-  - Gleichzeitig wird von Platz p_6 aus die Aktion 'Set Reserve' ausgeführt, was den Zustand zu p_7 ändert.
-  - Von Platz p_13 aus wird die 'Assign Claim' Funktion ausgeführt, was den Platz zu p_14 ändert.
-  - Dann, ausgehend von Platz p_11, wird die 'Claim Decision' Funktion ausgeführt, die den Platz zu p_12 ändert.
-  - Abschließend werden die Funktionen 'Close Claim' von den beiden Plätzen p_12 und p_14 aus ausgeführt und die Ergebnisse werden in Platz p_9 zusammengeführt.
-  - Die endgültige Markierung 'sink:1' wird erreicht, wenn alle Aktionen abgeschlossen sind und die Ergebnisse von den Plätzen p_5, p_7 und p_9 aus zu der Synchronisationsfunktion 'tauJoin_2' geleitet werden.
+Wir können allerdings die möglichen Prozesspfade basierend auf der Petri-Netzstruktur beschreiben. Ein möglicher Pfad könnte sein:
+
+1. 'First Notification of Loss (FNOL)'
+2. 'Claim Decision'
+3. 'Close Claim'
+
+oder
+
+1. 'First Notification of Loss (FNOL)'
+2. 'Assign Claim'
+3. 'Close Claim'
+
+oder
+
+1. 'First Notification of Loss (FNOL)'
+2. 'Payment Sent'
+3. Danach tritt der Prozess in einen Zustand (p_5), aus dem es keine möglicherweise folgende Aktivität gibt, was gegen die Regeln eines Petri-Netzes verstoßen würde.
+
+Ein Pfad könnte auch beinhalten:
+
+1. 'First Notification of Loss (FNOL)'
+2. 'Set Reserve'
+3. Danach tritt der Prozess in einen Zustand (p_7), aus dem es keine möglicherweise folgende Aktivität gibt, was gegen die Regeln eines Petri-Netzes verstoßen würde.
+
+Diese Pfadbeschreibungen basieren auf der Annahme, dass jede Aktivität nur einmal ausgeführt wird. In mehreren Fällen tritt der Prozess nach der Ausführung einer Aktivität in einen Zustand ein, aus dem keine weiteren Aktivitäten möglich sind. Dies deutet darauf hin, dass das bereitgestellte Petri-Netz nicht vollständig ist oder dass die Darstellung der Aktivitäten und Zustände nicht korrekt ist. 
+
+Es wäre hilfreich, zusätzliche Informationen oder eine korrigierte Darstellung des Petri-Netzes zu haben, um genaue und vollständige Prozesspfade identifizieren zu können. 
+
+Die aufgeführten Pfade gelten für den Fall, dass alle erforderlichen Bedingungen für die Ausführung von Aktivitäten erfüllt sind. Dazu gehören insbesondere die Verfügbarkeit von Markierungen in den Zuständen, die zu den Aktivitäten führen. 
+
+Der Path bleibt solange im Zustand wie die Bedingung für die Aktivität erfüllt ist. Es handelt sich also um eine Blockade, bis eine andere Aktion diese Bedingung ändert und den Übergang ermöglicht.

@@ -1,0 +1,31 @@
+**Antwort:**
+
+1. Übergangsanalyse:
+
+- Übergang: First Notification of Loss (FNOL) -> Assign Claim
+  - Durchschnittliche Durchlaufzeit (performance): 1296891.342 Sekunden (~15 Tage)
+  - Häufigkeit (frequency): 29807
+  - Bewertung: Potenzieller Engpass, da dieser Übergang die längste Durchlaufzeit hat und gleichzeitig sehr häufig auftritt. 
+
+- Übergang: Assign Claim -> Claim Decision
+  - Durchschnittliche Durchlaufzeit (performance): 436089.502 Sekunden (~5 Tage)
+  - Häufigkeit (frequency): 29621
+  - Bewertung: Potenzieller Engpass, da die Durchlaufzeit relativ hoch und die Frequenz sehr hoch ist.
+
+- Übergang: Claim Decision -> Set Reserve
+  - Durchschnittliche Durchlaufzeit (performance): 435701.143 Sekunden (~5 Tage)
+  - Häufigkeit (frequency): 29444
+  - Bewertung: Potenzieller Engpass, da die Durchlaufzeit relativ hoch und die Frequenz sehr hoch ist.
+
+- Übergang: Set Reserve -> Payment Sent
+  - Durchschnittliche Durchlaufzeit (performance): 434721.419 Sekunden (~5 Tage)
+  - Häufigkeit (frequency): 29456
+  - Bewertung: Potenzieller Engpass, da die Durchlaufzeit relativ hoch und die Frequenz sehr hoch ist.
+
+- Übergang: First Notification of Loss (FNOL) -> Claim Decision
+  - Durchschnittliche Durchlaufzeit (performance): 1245436.515 Sekunden (~14 Tage)
+  - Häufigkeit (frequency): 192
+  - Bewertung: Trotz der hohen Durchlaufzeit ist dieser Übergang wahrscheinlich kein Engpass, da die Frequenz im Vergleich zu den anderen betrachteten Übergängen sehr niedrig ist.
+
+2. Fazit: 
+Die ersten vier Übergänge haben alle eine hohe Durchlaufzeit und gleichzeitig eine sehr hohe Frequenz, was darauf hindeutet, dass sie potenzielle Engpässe im Prozess sein könnten. Es könnte sinnvoll sein, diese Übergänge genauer zu untersuchen und Möglichkeiten zur Verbesserung der Effizienz zu identifizieren. Der letzte Übergang hat ebenfalls eine sehr hohe Durchlaufzeit, aber eine deutlich niedrigere Frequenz, was darauf hindeutet, dass er wahrscheinlich kein Engpass ist.
