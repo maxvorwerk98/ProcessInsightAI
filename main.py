@@ -51,5 +51,13 @@ def main():
 
 #-----------------------------------------------------------------------------
 
+    try:
+        process_performance(event_logs)
+        print("Process-Performance-Analysis erfolgreich durchgeführt.")
+    except ValueError as exception:
+        print(exception)
+
+#-----------------------------------------------------------------------------
+
 if __name__ == "__main__":
     main()
