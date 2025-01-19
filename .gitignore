@@ -1,0 +1,9 @@
+# Ignore large files
+input/data_claim_process.xes
+input/data_hospital-sepsis-process.xes
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore Caches
+__pycache__/

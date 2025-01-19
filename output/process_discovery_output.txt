@@ -1,14 +1,11 @@
-Basierend auf dem Petri-Netz sehen wir, dass es eine klare Reihenfolge von Übergängen ergibt, die den am häufigsten vorkommenden Ablauf ("Happy-Path") bilden. Dieser ist wie folgt:
+1. **Happy-Path:** 
+  'First Notification of Loss (FNOL)' -> 'Payment Sent' -> 'Set Reserve' -> 'Assign Claim' -> 'Claim Decision' -> 'Close Claim'
 
-- "First Notification of Loss (FNOL)"
-- "Set Reserve"
-- "Assign Claim"
-- "Claim Decision"
-- "Payment Sent"
-- "Close Claim"
-
-**Happy-Path:** "First Notification of Loss (FNOL)" -> "Set Reserve" -> "Assign Claim" -> "Claim Decision" -> "Payment Sent" -> "Close Claim"
-
-**Bedingungen:** Zunächst muss eine erste Benachrichtigung über den Verlust ("First Notification of Loss (FNOL)") erfolgen. Diese führt zu den Zuständen p_11, p_13, p_4 und p_6. Der nächste Schritt ist das Setzen einer Reserve ("Set Reserve"). Dieser Übergang benötigt den Zustand p_6 und führt zum Zustand p_7. Anschließend wird ein Anspruch zugewiesen ("Assign Claim"). Dafür wird der Zustand p_13 benötigt und es wird der Zustand p_14 erreicht. Danach folgt die Entscheidung über den Anspruch ("Claim Decision"). Hierfür ist der Zustand p_11 nötig und es resultiert der Zustand p_12. Als nächstes wird eine Zahlung gesendet ("Payment Sent"). Dafür ist der Zustand p_4 erforderlich und es folgt der Zustand p_5. Schließlich wird der Anspruch abgeschlossen ("Close Claim"). Dieser Schritt benötigt die Zustände p_12 und p_14 und führt zum Zustand p_9.
-
-Jeder dieser Übergänge sehr sequenziell, d.h. nacheinander und ohne Verzweigungen, auszuführen. Am Ende wird der Endzustand "sink" erreicht, wodurch der Ablauf abgeschlossen ist.
+2. **Bedingungen:**
+  - Der Prozess startet bei der 'First Notification of Loss (FNOL)'. Die Verlustmeldung wird an den Plätzen p_11, p_13, p_4 und p_6 zur weiteren Bearbeitung verteilt.
+  - Ausgehend von p_4 wird die 'Payment Sent' Aktion ausgeführt, was den Zustand zu p_5 ändert.
+  - Gleichzeitig wird von Platz p_6 aus die Aktion 'Set Reserve' ausgeführt, was den Zustand zu p_7 ändert.
+  - Von Platz p_13 aus wird die 'Assign Claim' Funktion ausgeführt, was den Platz zu p_14 ändert.
+  - Dann, ausgehend von Platz p_11, wird die 'Claim Decision' Funktion ausgeführt, die den Platz zu p_12 ändert.
+  - Abschließend werden die Funktionen 'Close Claim' von den beiden Plätzen p_12 und p_14 aus ausgeführt und die Ergebnisse werden in Platz p_9 zusammengeführt.
+  - Die endgültige Markierung 'sink:1' wird erreicht, wenn alle Aktionen abgeschlossen sind und die Ergebnisse von den Plätzen p_5, p_7 und p_9 aus zu der Synchronisationsfunktion 'tauJoin_2' geleitet werden.
