@@ -1,28 +1,28 @@
-1. Übergänge mit den höchsten Performance-Werten:
+**Ergebnisse**
 
-   a. Übergang: First Notification of Loss (FNOL) -> Assign Claim
-      - Durchschnittliche Durchlaufzeit (performance): 1296891.342 Sekunden = 15 Tage 
-      - Häufigkeit (frequency): 29807
-      - Bewertung: Engpass Ja. Dieser Übergang hat die längste Durchlaufzeit und tritt auch sehr häufig auf. Es könnte ein Engpass durch die hohe Wartezeit von der ersten Schadensmeldung bis zur Beauftragung des Schadensfalles entstehen.
-      
-   b. Übergang: First Notification of Loss (FNOL) -> Claim Decision
-      - Durchschnittliche Durchlaufzeit (performance): 1245436.515 Sekunden = 14.4 Tage
-      - Häufigkeit (frequency): 192
-      - Bewertung: Engpass Nicht Sicher. Obwohl die Durchlaufzeit hoch ist, ist die Häufigkeit dieses Übergangs relativ niedrig. Daher könnte ein potenzieller Engpass auftreten, es ist aber nicht so wahrscheinlich wie bei anderen Übergängen.
-      
-   c. Übergang: Assign Claim -> Claim Decision
-      - Durchschnittliche Durchlaufzeit (performance): 436089.502 Sekunden = 5 Tage
-      - Häufigkeit (frequency): 29621
-      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Vorgang sehr häufig auf und könnte daher ein potenzieller Engpass sein.
-      
-   d. Übergang: Set Reserve -> Payment Sent
-      - Durchschnittliche Durchlaufzeit (performance): 434721.419 Sekunden = 5 Tage
-      - Häufigkeit (frequency): 29456
-      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Übergang sehr häufig auf und könnte daher ein Engpass sein.
-      
-   e. Übergang: Claim Decision -> Set Reserve
-      - Durchschnittliche Durchlaufzeit (performance): 435701.143 Sekunden = 5 Tage
-      - Häufigkeit (frequency): 29444
-      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Vorgang sehr häufig auf und könnte daher ein Engpass sein.
+1. Übergang: "First Notification of Loss (FNOL) -> Assign Claim"
+   - Durchschnittliche Durchlaufzeit (Performance): 360.803 h 
+   - Häufigkeit (Frequency): 29807
+   - Bewertung: Möglicher Engpass, da dieser Übergang die höchste Zeitdauer aufweist und sehr häufig auftritt. Dieser Schritt zu Beginn des Prozesses könnte Verzögerungen für alle nachfolgenden Schritte verursachen.
 
-2. Insgesamt stellen die Übergänge (a), (c), (d) und (e) mögliche Engpässe dar, da sie hohe Performancewerte kombiniert mit hoher Frequency aufweisen. Die Position dieser Übergänge zu Beginn und in der Mitte des Prozesses könnte zu Verzögerungen und Wartezeiten in den nachfolgenden Schritten führen. Der Übergang (b) könnte ebenfalls ein Engpass sein, trotz seiner niedrigeren Frequency. Jedoch ist seine Position am Anfang des Prozesses kritisch und sollte daher berücksichtigt werden.
+2. Übergang: "First Notification of Loss (FNOL) -> Claim Decision"
+   - Durchschnittliche Durchlaufzeit (Performance): 345.955 h 
+   - Häufigkeit (Frequency): 192
+   - Bewertung: Kein Engpass, obwohl die Performance hoch ist, tritt dieser Übergang im Vergleich zu anderen selten auf.
+
+3. Übergang: "Assign Claim -> Claim Decision"
+   - Durchschnittliche Durchlaufzeit (Performance): 121.136 h 
+   - Häufigkeit (Frequency): 29621
+   - Bewertung: Möglicher Engpass, trotz etwas geringerer Performance ist die Frequenz dieses Übergangs sehr hoch. Dies bedeutet, eine große Anzahl von Forderungen könnte hier hängen bleiben.
+
+4. Übergang: "Claim Decision -> Set Reserve"
+   - Durchschnittliche Durchlaufzeit (Performance): 121.028 h 
+   - Häufigkeit (Frequency): 29444
+   - Bewertung: Möglicher Engpass, ähnlich wie oben, trotz etwas geringerer Performance als die ersten beiden, ist die Frequenz sehr hoch, was zu Stauungen führen kann.
+
+5. Übergang: "Set Reserve -> Payment Sent"
+   - Durchschnittliche Durchlaufzeit (Performance): 120.756 h 
+   - Häufigkeit (Frequency): 29456
+   - Bewertung: Möglicher Engpass, eine hohe Anzahl von Forderungen könnte in diesem Prozessschritt hängen bleiben, was weitere Verzögerungen hervorrufen kann. 
+
+Hinweis: Die gegebenen Performance-Werte in Sekunden wurden in Stunden umgewandelt (geteilt durch 3600) um eine intuitivere Interpretation zu ermöglichen.
