@@ -1,35 +1,28 @@
-**Ergebnis:**
+1. Übergänge mit den höchsten Performance-Werten:
 
-1.
-- Übergang: ["First Notification of Loss (FNOL)" -> "Assign Claim"]
-- Durchschnittliche Durchlaufzeit (performance): 360.247 Stunden
-- Häufigkeit (frequency): 29807
-- Bewertung: Ja, dies könnte ein Engpass sein. Der Übergang tritt sehr häufig auf und hat die längste Durchlaufzeit. 
+   a. Übergang: First Notification of Loss (FNOL) -> Assign Claim
+      - Durchschnittliche Durchlaufzeit (performance): 1296891.342 Sekunden = 15 Tage 
+      - Häufigkeit (frequency): 29807
+      - Bewertung: Engpass Ja. Dieser Übergang hat die längste Durchlaufzeit und tritt auch sehr häufig auf. Es könnte ein Engpass durch die hohe Wartezeit von der ersten Schadensmeldung bis zur Beauftragung des Schadensfalles entstehen.
+      
+   b. Übergang: First Notification of Loss (FNOL) -> Claim Decision
+      - Durchschnittliche Durchlaufzeit (performance): 1245436.515 Sekunden = 14.4 Tage
+      - Häufigkeit (frequency): 192
+      - Bewertung: Engpass Nicht Sicher. Obwohl die Durchlaufzeit hoch ist, ist die Häufigkeit dieses Übergangs relativ niedrig. Daher könnte ein potenzieller Engpass auftreten, es ist aber nicht so wahrscheinlich wie bei anderen Übergängen.
+      
+   c. Übergang: Assign Claim -> Claim Decision
+      - Durchschnittliche Durchlaufzeit (performance): 436089.502 Sekunden = 5 Tage
+      - Häufigkeit (frequency): 29621
+      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Vorgang sehr häufig auf und könnte daher ein potenzieller Engpass sein.
+      
+   d. Übergang: Set Reserve -> Payment Sent
+      - Durchschnittliche Durchlaufzeit (performance): 434721.419 Sekunden = 5 Tage
+      - Häufigkeit (frequency): 29456
+      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Übergang sehr häufig auf und könnte daher ein Engpass sein.
+      
+   e. Übergang: Claim Decision -> Set Reserve
+      - Durchschnittliche Durchlaufzeit (performance): 435701.143 Sekunden = 5 Tage
+      - Häufigkeit (frequency): 29444
+      - Bewertung: Engpass Ja. Trotz der niedrigeren Durchlaufzeit im Vergleich zu anderen Übergängen tritt dieser Vorgang sehr häufig auf und könnte daher ein Engpass sein.
 
-2.
-- Übergang: ["First Notification of Loss (FNOL)" -> "Claim Decision"]
-- Durchschnittliche Durchlaufzeit (performance): 345.955 Stunden
-- Häufigkeit (frequency): 192
-- Bewertung: Ja, obwohl diese Aktivität nicht so häufig vorkommt wie die erste, hat sie eine sehr hohe Durchlaufzeit. Es sollte untersucht werden, ob es Möglichkeiten zur Prozessoptimierung gibt.
-
-3.
-- Übergang: ["Assign Claim" -> "Claim Decision"]
-- Durchschnittliche Durchlaufzeit (performance): 121.135 Stunden
-- Häufigkeit (frequency): 29621
-- Bewertung: Ja, aufgrund der hohen Häufigkeit und der verhältnismäßig hohen Durchlaufzeit könnte dies ein weiterer Engpass sein.
-
-4.
-- Übergang: ["Claim Decision" -> "Set Reserve"]
-- Durchschnittliche Durchlaufzeit (performance): 121.028 Stunden
-- Häufigkeit (frequency): 29444
-- Bewertung: Ja, ähnlich wie bei der vorherigen Aktivität könnte aufgrund der hohen Häufigkeit und der hohen Durchlaufzeit ein Engpass vorliegen.
-
-5.
-- Übergang: ["Set Reserve" -> "Payment Sent"]
-- Durchschnittliche Durchlaufzeit (performance): 120.756 Stunden
-- Häufigkeit (frequency): 29456
-- Bewertung: Ja, dies könnte ein Engpass sein, da er häufig auftritt und eine hohe Durchlaufzeit aufweist. 
-
-**Zusammenfassung**:
-
-Offensichtlich gibt es mehrere Aktivitäten im Ablauf, die aufgrund ihrer Häufigkeit und Dauer potenzielle Engpässe darstellen könnten. Es wäre empfehlenswert weitergehende Analysen durchzuführen und gezielte Maßnahmen zu entwickeln, um diese möglichen Engpässe zu beheben und den Prozessablauf zu optimieren.
+2. Insgesamt stellen die Übergänge (a), (c), (d) und (e) mögliche Engpässe dar, da sie hohe Performancewerte kombiniert mit hoher Frequency aufweisen. Die Position dieser Übergänge zu Beginn und in der Mitte des Prozesses könnte zu Verzögerungen und Wartezeiten in den nachfolgenden Schritten führen. Der Übergang (b) könnte ebenfalls ein Engpass sein, trotz seiner niedrigeren Frequency. Jedoch ist seine Position am Anfang des Prozesses kritisch und sollte daher berücksichtigt werden.
