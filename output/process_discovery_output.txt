@@ -1,38 +1,25 @@
-Aufgrund der bereitgestellten Informationen über das Petri-Netz, ergibt sich folgender Happy Path:
+Ohne weitere Informationen oder Daten über die Häufigkeit der Aktivitäten und Übergänge kann der "Happy-Path" basierend auf dem gegebenen Petri-Netz nicht eindeutig identifiziert werden. 
 
-1. First Notification of Loss (FNOL)
-2. Assign Claim
-3. Claim Decision
-4. Payment Sent
-5. Set Reserve
-6. Close Claim
+Wenn wir jedoch unter der Annahme handeln, dass der einfachste Weg durch das Netz der Happy-Path ist, würde dies wie folgt aussehen:
 
-**Beschreibung des Ablaufs:**
+**Happy-Path:** "First Notification of Loss (FNOL)" -> "Assign Claim" -> "Close Claim" 
 
-Zuerst wird der Verlust gemeldet (First Notification of Loss (FNOL)). Diese Aktion führt zu den Zuständen p_11, p_13, p_4, und p_6.
+Dabei verläuft der Prozess wie folgt: 
 
-Dann wird der Claim dem zuständigen Mitarbeiter zugewiesen (Assign Claim), was den Zustand p_14 erzeugt.
+1. Es beginnt mit einem Vorfall, der zu einem Verlust führt ("First Notification of Loss (FNOL)"), der von der Quelle ("source") aus gestartet wird und zu den Plätzen p_11, p_13, p_4 und p_6 führt. 
 
-Nach der Zuweisung wird die Entscheidung zum Claim (Claim Decision) getroffen, was den Zustand p_12 herstellt.
+2. Danach wird der Anspruch zugewiesen ("Assign Claim"), was von p_13 ausgeht und zu p_14 führt. 
 
-Ist die Entscheidung pro Claim gefallen, so wird die Zahlung versandt (Payment Sent), was den Zustand p_5 erstellt.
+3. Schließlich wird der Anspruch geschlossen ("Close Claim"), was von den Plätzen p_12 und p_14 ausgeht und zu p_9 führt, das zum Senkenpunkt ("sink") führt. 
 
-Gleichzeitig oder nach der Zahlung wird die Reserve gesetzt (Set Reserve), was den Zustand p_7 erzeugt.
+**Bedingungen:** 
 
-Schlussendlich, nachdem alle vorherigen Zustände erreicht wurden, wird der Claim geschlossen (Close Claim), was den Zustand p_9 erzeugt und danach in den End-Zustand (sink) mündet. 
+Um diesen Ablauf zu durchlaufen, müssen folgende Übergänge und Zustände erfolgen:
 
-**Bedingungen:**
+- Der Übergang "First Notification of Loss (FNOL)" muss ausgeführt werden, um die Zustände p_11, p_13, p_4 und p_6 zu erreichen.
+- Der Zustand p_13 muss erreicht sein, um den Übergang "Assign Claim" auszuführen.
+- Der Zustand p_14 muss erreicht sein, um den Übergang "Close Claim" auszuführen.
+- Der Übergang "Close Claim" muss ausgeführt werden, um den Zustand p_9 zu erreichen.
+- Der Zustand p_9 muss erreicht sein, um den endgültigen Zustand "sink" zu erreichen.
 
-Es beginnt mit dem Startzustand (source) und mündet in den Zustand 'sink'. 
-
-Um von der 'First Notification of Loss (FNOL)' zur 'Claim Assignment' zu gelangen, muss der Übergang vom Zustand p_13 zu p_14 durchlaufen werden. 
-
-Für die 'Claim Decision' ist der Übergang vom Zustand p_11 zu p_12 essentiell.
-
-Um von der 'Claim Decision' zur 'Payment Sent' zu gelangen, muss der Übergang von Zustand p_4 zu p_5 durchlaufen werden.
-
-Um dann von der 'Payment Sent' zur 'Set Reserve' zu gelangen, muss der Übergang von Zustand p_6 zu p_7 durchlaufen werden. 
-
-Schließlich, um vom 'Set Reserve' zum 'Close Claim' zu gelangen, sind die Zustände p_7 und p_14 essentiell, die dann zu p_9 führen.
-
-Jeder dieser Übergänge muss erfolgreich durchlaufen werden, um den Endzustand (sink) zu erreichen und damit den Prozess abzuschließen. Abweichungen von diesem Pfad führen zu alternativen oder fehlerhaften Prozessverläufen.
+Hinweis: Dies ist eine abstrakte und vereinfachte Darstellung des Prozesses. In einem realen Szenario könnten weitere Aktivitäten, Übergänge und Zustände notwendig sein.

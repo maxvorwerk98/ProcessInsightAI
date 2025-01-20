@@ -1,27 +1,24 @@
-1. Ursache: Hohe Schadenssumme
-   - Technologie: Künstliche Intelligenz (KI) und Machine Learning (ML)
-   - Optimierungspotenzial: Durch die Anwendung von KI und ML können Schadensmeldungen automatisch geprüft und zugeordnet werden. Dies kann die Prüfungs- und Bearbeitungszeit reduzieren, da diese Systeme automatische Hochrechnungen und Risikobewertungen durchführen können.
+- Schwachstelle: Bearbeitungszeit
 
-2. Ursache: Alter der Antragsteller
-   - Technologie: Persona-basierte Anwenderschnittstellen
-   - Optimierungspotenzial: Persona-basierte Schnittstellen können die Bereitstellung von Dienstleistungen individuell an das Alter und die Bedürfnisse der Benutzer anpassen, so dass ältere Nutzer effizienter ihre Informationen bereitstellen können.
+Technologie: **Prozessautomatisierungstechnologien** wie RPA (Robotic Process Automation) und BPM (Business Process Management) Tools
+Optimierungspotenzial: Diese Tools können genutzt werden, um manuelle, zeitintensive Aufgaben zu automatisieren und somit die Prozessdurchlaufzeit zu minimieren.
 
-3. Ursache: Autojahr
-   - Technologie: Datenanalyse und -Validierungssysteme
-   - Optimierungspotenzial: Systeme zur Datenanalyse und -validierung können helfen, Daten über den Zustand älterer Autos schneller und genauer zu sammeln und zu analysieren, was die Bearbeitungszeit reduzieren kann.
+- Schwachstelle: Abhängigkeiten zwischen Events
 
-4. Ursache: Aufteilung der Aufgaben zwischen Menschen und RPA
-   - Technologie: Intelligente Workflow-Systeme
-   - Optimierungspotenzial: Diese Systeme können dazu beitragen, die Arbeitsaufteilung zwischen Menschen und Maschinen effizienter zu gestalten, indem sie Aufgaben, die schnell und ohne menschliche Intervention durchgeführt werden können, automatisch an RPA-Systeme delegieren.
+Technologie: **Parallelverarbeitungssysteme** und Tools zur **Geschäftsprozessteuerung**
+Optimierungspotenzial: Diese Systeme können die Interdependenzen zwischen verschiedenen Prozessen erkennen und können dazu beitragen, diese Prozesse parallel zu organisieren, um die Gesamtbearbeitungszeit zu reduzieren.
 
-5. Ursache: Art der Police und des Unfalls
-   - Technologie: Database-Management-Systeme und Predictive-Analytics
-   - Optimierungspotenzial: Diese Technologien können durch die Verwendung von statistischen Modellen und maschinellem Lernen genaue Vorhersagen über die benötigte Bearbeitungszeit basierend auf der Art des Unfalls und der Police liefern. 
+- Schwachstelle: Hohe Schadensformularwerte
 
-6. Ursache: Automarke und -modell
-   - Technologie: Künstliche Intelligenz (KI) und Blockchain-Technologie
-   - Optimierungspotenzial: Eine KI kann Teile und notwendige Reparaturen basierend auf der Marke und dem Modell des Autos vorhersagen. Blockchain kann dabei helfen, die Authentizität von Teilen zu überprüfen und die Transparenz von Lieferketten zu erhöhen.
+Technologie: **Künstliche Intelligenz (KI)-basierte Schadensteuerungssysteme**
+Optimierungspotenzial: Mit dem Einsatz von künstlicher Intelligenz könnten komplizierte und hohe Schadensaufwände schneller bewältigt werden. Diese Systeme könnten assistieren in Fallbewertung, Entscheidungsfindung und schließlich der beschleunigten Bearbeitung der Fälle mit hohen Schadensansprüchen.
 
-7. Ursache: Schrittfolge im Prozess
-   - Technologie: Prozessautomatisierung und intelligente Workflow-Systeme
-   - Optimierungspotenzial: Automatisierung kann helfen, die Wartezeiten zwischen den Prozessschritten zu eliminieren und die gesamte Bearbeitungszeit zu reduzieren. Dadurch wird der Prozess effizienter und schneller.
+- Schwachstelle: Nutzerunterstützung
+
+Technologie: **RPA (Robotic Process Automation) und NLP (Natural Language Processing) Tools**
+Optimierungspotenzial: Durch den verstärkten Einsatz von RPA für sich wiederholende und einfache Aufgaben könnten menschliche Nutzer entlastet werden. NLP könnte zur Bot-Kommunikation genutzt werden, um einfache Anfragen zu beantworten und menschliche Nutzer zu unterstützen, wodurch die Bearbeitungsdauer reduziert wird. 
+
+- Schwachstelle: Menschliche Nutzer benötigen mehr Bearbeitungszeit als automatisierte Prozesse
+
+Technologie: **Schulungen und Workshops** zu Technologien wie RPA 
+Optimierungspotenzial: Durch den gezielten Einsatz von Schulungen zu Technologiegesteuerten Prozessen könnten menschliche Nutzer effizienter in den Arbeitsabläufen werden und damit die Bearbeitungszeit reduzieren.
