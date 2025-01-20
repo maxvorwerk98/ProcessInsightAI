@@ -1,33 +1,38 @@
-Aufgrund der zur Verfügung gestellten Daten können wir den „Happy Path“, also die am häufigsten vorkommende Reihenfolge von Aktivitäten, nicht explizit identifizieren. Die Häufigkeit eines Prozesspfads hängt von den realen Ausführungsdaten ab und nicht von der Petri-Netzstruktur allein. 
+Aufgrund der bereitgestellten Informationen über das Petri-Netz, ergibt sich folgender Happy Path:
 
-Wir können allerdings die möglichen Prozesspfade basierend auf der Petri-Netzstruktur beschreiben. Ein möglicher Pfad könnte sein:
+1. First Notification of Loss (FNOL)
+2. Assign Claim
+3. Claim Decision
+4. Payment Sent
+5. Set Reserve
+6. Close Claim
 
-1. 'First Notification of Loss (FNOL)'
-2. 'Claim Decision'
-3. 'Close Claim'
+**Beschreibung des Ablaufs:**
 
-oder
+Zuerst wird der Verlust gemeldet (First Notification of Loss (FNOL)). Diese Aktion führt zu den Zuständen p_11, p_13, p_4, und p_6.
 
-1. 'First Notification of Loss (FNOL)'
-2. 'Assign Claim'
-3. 'Close Claim'
+Dann wird der Claim dem zuständigen Mitarbeiter zugewiesen (Assign Claim), was den Zustand p_14 erzeugt.
 
-oder
+Nach der Zuweisung wird die Entscheidung zum Claim (Claim Decision) getroffen, was den Zustand p_12 herstellt.
 
-1. 'First Notification of Loss (FNOL)'
-2. 'Payment Sent'
-3. Danach tritt der Prozess in einen Zustand (p_5), aus dem es keine möglicherweise folgende Aktivität gibt, was gegen die Regeln eines Petri-Netzes verstoßen würde.
+Ist die Entscheidung pro Claim gefallen, so wird die Zahlung versandt (Payment Sent), was den Zustand p_5 erstellt.
 
-Ein Pfad könnte auch beinhalten:
+Gleichzeitig oder nach der Zahlung wird die Reserve gesetzt (Set Reserve), was den Zustand p_7 erzeugt.
 
-1. 'First Notification of Loss (FNOL)'
-2. 'Set Reserve'
-3. Danach tritt der Prozess in einen Zustand (p_7), aus dem es keine möglicherweise folgende Aktivität gibt, was gegen die Regeln eines Petri-Netzes verstoßen würde.
+Schlussendlich, nachdem alle vorherigen Zustände erreicht wurden, wird der Claim geschlossen (Close Claim), was den Zustand p_9 erzeugt und danach in den End-Zustand (sink) mündet. 
 
-Diese Pfadbeschreibungen basieren auf der Annahme, dass jede Aktivität nur einmal ausgeführt wird. In mehreren Fällen tritt der Prozess nach der Ausführung einer Aktivität in einen Zustand ein, aus dem keine weiteren Aktivitäten möglich sind. Dies deutet darauf hin, dass das bereitgestellte Petri-Netz nicht vollständig ist oder dass die Darstellung der Aktivitäten und Zustände nicht korrekt ist. 
+**Bedingungen:**
 
-Es wäre hilfreich, zusätzliche Informationen oder eine korrigierte Darstellung des Petri-Netzes zu haben, um genaue und vollständige Prozesspfade identifizieren zu können. 
+Es beginnt mit dem Startzustand (source) und mündet in den Zustand 'sink'. 
 
-Die aufgeführten Pfade gelten für den Fall, dass alle erforderlichen Bedingungen für die Ausführung von Aktivitäten erfüllt sind. Dazu gehören insbesondere die Verfügbarkeit von Markierungen in den Zuständen, die zu den Aktivitäten führen. 
+Um von der 'First Notification of Loss (FNOL)' zur 'Claim Assignment' zu gelangen, muss der Übergang vom Zustand p_13 zu p_14 durchlaufen werden. 
 
-Der Path bleibt solange im Zustand wie die Bedingung für die Aktivität erfüllt ist. Es handelt sich also um eine Blockade, bis eine andere Aktion diese Bedingung ändert und den Übergang ermöglicht.
+Für die 'Claim Decision' ist der Übergang vom Zustand p_11 zu p_12 essentiell.
+
+Um von der 'Claim Decision' zur 'Payment Sent' zu gelangen, muss der Übergang von Zustand p_4 zu p_5 durchlaufen werden.
+
+Um dann von der 'Payment Sent' zur 'Set Reserve' zu gelangen, muss der Übergang von Zustand p_6 zu p_7 durchlaufen werden. 
+
+Schließlich, um vom 'Set Reserve' zum 'Close Claim' zu gelangen, sind die Zustände p_7 und p_14 essentiell, die dann zu p_9 führen.
+
+Jeder dieser Übergänge muss erfolgreich durchlaufen werden, um den Endzustand (sink) zu erreichen und damit den Prozess abzuschließen. Abweichungen von diesem Pfad führen zu alternativen oder fehlerhaften Prozessverläufen.

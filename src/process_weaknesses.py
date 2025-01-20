@@ -19,27 +19,26 @@ client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 model_name = "gpt-4"
 
 #-----------------------------------------------------------------------------
-# Process Discovery Analysis
+# Process Weaknesses Analysis
 #-----------------------------------------------------------------------------
 
-def process_discovery(event_logs):
-    
+def process_weaknesses(event_logs):
+
     try:
-        net, im, fm = pm4py.discover_petri_net_inductive(event_logs)
+        with open("prompts/user_weaknesses_prompt.txt", "r", encoding="utf-8") as file:
+            user_weaknesses_prompt = file.read()
 
-        with open("prompts/user_discovery_prompt.txt", "r", encoding="utf-8") as file:
-            user_discovery_prompt = file.read()
-
-        user_discovery_prompt = user_discovery_prompt.replace("<<Petri-Net>>", pm4py.llm.abstract_petri_net(net, im, fm))
+        user_weaknesses_prompt = user_weaknesses_prompt.replace("<<Event-Logs>>", pm4py.llm.abstract_log_features(event_logs))
+        user_weaknesses_prompt = user_weaknesses_prompt.replace("<<Variants>>", pm4py.llm.abstract_variants(event_logs))
 
         response = client.chat.completions.create(
             model=model_name,
             messages=[
-                {"role": "user", "content": user_discovery_prompt}
+                {"role": "user", "content": user_weaknesses_prompt}
             ]
         )
 
-        with open("output/process_discovery_output.txt", "w", encoding="utf-8") as file:
+        with open("output/process_weaknesses_output.txt", "w", encoding="utf-8") as file:
             file.write(response.choices[0].message.content)
 
     except Exception as exception:

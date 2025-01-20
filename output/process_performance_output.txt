@@ -1,0 +1,30 @@
+**Lösung:** 
+
+Basierend auf den gegebenen Daten, sind die 5 Übergänge mit der höchsten Performance:
+
+1. Übergang: First Notification of Loss (FNOL) -> Assign Claim 
+   - Durchschnittliche Durchlaufzeit (performance): ~360 Stunden
+   - Häufigkeit (frequency): 29807
+   - Bewertung: Dieser Übergang könnte ein potenzieller Engpass sein. Die lange Durchlaufzeit kombiniert mit der hohen Häufigkeit des Vorkommens, deutet darauf hin, dass diese spezifische Phase des Prozesses langsamer ist als andere und oft stattfindet. 
+
+2. Übergang: First Notification of Loss (FNOL) -> Claim Decision
+   - Durchschnittliche Durchlaufzeit (performance): ~346 Stunden
+   - Häufigkeit (frequency): 192
+   - Bewertung: Während die Durchlaufzeit in diesem Übergang auch hoch ist, ist das Vorkommen vergleichsweise niedrig. Deshalb ist es unwahrscheinlich, dass dies ein Engpass ist.
+
+3. Übergang: Assign Claim -> Claim Decision
+   - Durchschnittliche Durchlaufzeit (performance): ~121 Stunden
+   - Häufigkeit (frequency): 29621
+   - Bewertung: Ein potentieller Engpass, da dieser Übergang auch oft stattfindet und eine lange Durchlaufzeit hat.
+
+4. Übergang: Claim Decision -> Set Reserve
+    - Durchschnittliche Durchlaufzeit (performance): ~121 Stunden
+    - Häufigkeit (frequency): 29444
+    - Bewertung: Ähnlich wie der vorherige Übergang, könnte dieser auch ein Engpass sein.
+
+5. Übergang: Set Reserve -> Payment Sent
+   - Durchschnittliche Durchlaufzeit (performance): ~121 Stunden
+   - Häufigkeit (frequency): 29456
+   - Bewertung: Dieser Übergang könnte auch ein Engpass sein, da er eine vergleichsweise lange Durchlaufzeit hat und sehr häufig auftritt.
+
+Die ausführliche Untersuchung dieser Übergänge könnte helfen, zu verstehen, warum sie eine hohe Durchlaufzeit haben und wie der Prozess eventuell optimiert werden kann.

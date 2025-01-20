@@ -2,13 +2,12 @@
 # Program description
 #-----------------------------------------------------------------------------
 #
-#   ProcessInsightAI is an LLM-powered tool designed to analyze processes using real process data in the form of event logs. Based on the event logs, the tool 
-#   conducts a four-phase technology analysis, structured as follows:
+#   ProcessInsightAI is an LLM-powered tool designed to analyze processes based on real process data in the form of event logs. Using these event logs, the tool #   performs a four-stage technology analysis, divided into the following phases:
 #
-#   Process Discovery: Performs a fundamental analysis to gain an initial overview of the process, understand its structure, and identify its main steps.
-#   Performance Analysis: Examines the process to identify bottlenecks, delays, inefficiencies, or potential cases of fraud that impact performance.
-#   Technology Analysis: Evaluates suitable technologies to address the previously identified anomalies and provides a detailed plan for their implementation.
-#   Forecasting: Assesses the impact of the selected technologies on the process to analyze their potential benefits and effectiveness.
+#   - Process Discovery: Fundamental analysis to identify the process structure and key process steps.
+#   - Performance Analysis: Examination of the process to identify delays and bottlenecks affecting performance.
+#   - Weakness Analysis: Investigation of the root causes of previously identified anomalies.
+#   - Technology Analysis: Evaluation of suitable technologies to address the identified anomalies.
 #
 #-----------------------------------------------------------------------------
 # Import
@@ -17,6 +16,7 @@
 from src.process_input import load_event_logs
 from src.process_discovery import process_discovery
 from src.process_performance import process_performance
+from src.process_weaknesses import process_weaknesses 
 from src.process_technology import process_technology
 
 #-----------------------------------------------------------------------------
@@ -38,7 +38,7 @@ def main():
 #-----------------------------------------------------------------------------
 
     try:
-        #process_discovery(event_logs)
+        process_discovery(event_logs)
         print("Process-Discovery erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
@@ -48,6 +48,14 @@ def main():
     try:
         process_performance(event_logs)
         print("Process-Performance-Analysis erfolgreich durchgeführt.")
+    except ValueError as exception:
+        print(exception)
+
+#-----------------------------------------------------------------------------
+
+    try:
+        process_weaknesses(event_logs)
+        print("Process-Weakness-Analysis erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
 
