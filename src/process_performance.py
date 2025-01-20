@@ -4,17 +4,9 @@
 
 import os
 import pm4py
-import pandas as pd
-import json
 
 from openai import OpenAI
 from dotenv import load_dotenv
-
-
-import pm4py
-import xml.etree.ElementTree as ET
-from pm4py.objects.log.importer.xes import importer as xes_importer
-from pm4py.objects.log.exporter.xes import exporter as xes_exporter
 
 #-----------------------------------------------------------------------------
 # Config

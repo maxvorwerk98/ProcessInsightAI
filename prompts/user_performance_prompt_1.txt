@@ -14,7 +14,7 @@ Bitte analysiere basierend auf dem folgendem Directly-Follows-Graph die durschni
 
 **Ergebnisformat**
 Gib die Ergebnisse in einer strukturierten Liste aus, wie folgt:
-- Übergang: [Name der beiden Aktivitäten]
-- Durchschnittliche Durchlaufzeit (performance): [Wert in Stunden]
-- Häufigkeit (frequency): [Wert]
-- Bewertung: [Engpass ja/nein + Begründung]
+- Übergang: Name der beiden Aktivitäten
+- Durchschnittliche Durchlaufzeit (performance): Wert in Stunden
+- Häufigkeit (frequency): Wert
+- Bewertung: Engpass ja/nein + Begründung

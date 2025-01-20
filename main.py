@@ -2,7 +2,8 @@
 # Program description
 #-----------------------------------------------------------------------------
 #
-#   ProcessInsightAI is an LLM-powered tool designed to analyze processes using real process data in the form of event logs. Based on the event logs, the tool #   conducts a four-phase technology analysis, structured as follows:
+#   ProcessInsightAI is an LLM-powered tool designed to analyze processes using real process data in the form of event logs. Based on the event logs, the tool 
+#   conducts a four-phase technology analysis, structured as follows:
 #
 #   Process Discovery: Performs a fundamental analysis to gain an initial overview of the process, understand its structure, and identify its main steps.
 #   Performance Analysis: Examines the process to identify bottlenecks, delays, inefficiencies, or potential cases of fraud that impact performance.
@@ -47,6 +48,14 @@ def main():
     try:
         process_performance(event_logs)
         print("Process-Performance-Analysis erfolgreich durchgeführt.")
+    except ValueError as exception:
+        print(exception)
+
+#-----------------------------------------------------------------------------
+
+    try:
+        process_technology(event_logs)
+        print("Process-Technology-Analysis erfolgreich durchgeführt.")
     except ValueError as exception:
         print(exception)
 

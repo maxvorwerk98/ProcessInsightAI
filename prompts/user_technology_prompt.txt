@@ -1,0 +1,12 @@
+Bitte führe basierend auf den folgenden Schwachstellen eine Technologieanalyse durch.
+
+**Schwachstellen**
+<<Weaknesses>>
+
+**Aufgabe:**
+1. Führe eine detaillierte Analyse durch, indem du für jede Schwachstelle spezifische Technologien, Methoden oder Systeme identifizierst, die zur Behebung der genannten Probleme geeignet sind.
+
+**Ergebnisformat:**
+Gib die Ergebnisse in einer strukturierten Liste aus, wie folgt:
+- Technologie: Kurze Beschreibung der Technologie
+- Optimierungspotenzial: Beschreibe, wie die Technologie die Schwachstelle adressiert

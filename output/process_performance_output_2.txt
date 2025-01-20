@@ -1,13 +1,15 @@
-- Ursache: Ältere Versicherungsnehmer: Der Datensatz zeigt, dass das Alter der Anspruchsteller von 18 bis 85 Jahre variiert, wobei der Durchschnitt bei 52 Jahren liegt. Ältere Menschen könnten mehr Zeit benötigen, um ihre Ansprüche abzuwickeln, was zu längeren Durchlaufzeiten führt.
+1. Ursache: Hohe Durchlaufzeit von Prozessen - Der gegebene Datensatz zeigt, dass die Gesamtdurchlaufzeit des Prozesses sehr hoch ist ("First Notification of Loss (FNOL) -> Assign Claim -> Claim Decision -> Set Reserve -> Payment Sent -> Close Claim" mit einer Performance von 3025321.368). Dies könnte darauf hinweisen, dass bestimmte Prozessschritte in der Kette länger dauern als erwartet.
 
-- Ursache: Hohe Schadenssummen: Der Betrag der Entschädigungsforderungen variiert von 1.000 bis fast 10.000. Bei höheren Beträgen könnten mehr Genehmigungsprozesse erforderlich sein, was zu längeren Durchlaufzeiten führen kann.
+2. Ursache: Höhe der Schadensforderung - Der durchschnittliche Betrag der Schadensforderungen liegt relativ hoch, was darauf hindeuten könnte, dass die Bearbeitung solcher Fälle mehr Zeit in Anspruch nimmt.
 
-- Ursache: Menschliche vs. RPA Benutzer: Von 30.000 Ereignissen wurden 19.400 von menschlichen Benutzern und 10.600 von RPA (Robotic Process Automation) Benutzern durchgeführt. Menschen arbeiten langsamer als RPA, was zu längeren Durchlaufzeiten führen kann.
+3. Ursache: Höheres Alter der Antragsteller - Die mittlere Altersgruppe der Antragsteller liegt in der Regel bei 52 Jahren. Ein höheres Alter könnte zu längeren Bearbeitungszeiten führen, z.B. durch erhöhte Komplexität in der Kommunikation oder zusätzliche Anforderungen im Prozessablauf.
 
-- Ursache: Komplexität der Politik: Es gibt drei Arten von Policen (Kollision, umfassend, Haftung), jede mit ihrer eigenen Komplexität und Prozessanforderungen, was die Durchlaufzeit beeinflussen kann.
+4. Ursache: Typ des Autounfalls - Die Daten zeigen eine Vielzahl verschiedener Unfalltypen, die bearbeitet werden müssen. Einige Unfallarten könnten komplexer sein und daher längere Durchlaufzeiten verursachen.
 
-- Ursache: Typ des Autounfalls: Es gibt vier Arten von Autounfällen (Seitenaufprall, Frontalaufprall, Heckaufprall, Überschlag), wobei jeder seine eigenen Untersuchungs- und Schadensbewertungsprozesse erfordert, die die Durchlaufzeit beeinflussen können.
-  
-- Ursache: Fahrzeugmodell und -alter: Unterschiedliche Fahrzeugmarken und -modelle sowie das Alter des Autos können den Bewertungs- und Genehmigungsprozess des Anspruchs beeinflussen.
+5. Ursache: Autotyp und -marke - Die Vielzahl an verschiedenen Automarken und -modellen kann ebenfalls zu längeren Durchlaufzeiten führen. Für bestimmte Modelle oder Marken könnte es komplizierter sein, den Schaden zu bewerten oder Ersatzteile zu beschaffen.
 
-- Ursache: Abfolge der Prozessschritte: Der gegebene Prozessablauf enthält mehrere Phasen, die nacheinander ausgeführt werden müssen, was zu längeren Durchlaufzeiten führen kann.
+6. Ursache: Art der User - Die Ereignisse im Prozess werden von unterschiedlichen User-Typen verarbeitet (Mensch vs. RPA - Robotic Process Automation). Es könnte sein, dass menschliche User länger für bestimmte Aufgaben benötigen als automatisierte Prozesse.
+
+7. Ursache: Art der Police - Verschiedene Police-Typen könnten unterschiedliche Prozessabläufe und damit verbundene Durchlaufzeiten aufweisen. Eine gründliche Analyse könnte Aufschluss darüber geben, ob bestimmte Police-Typen zu längeren Durchlaufzeiten führen. 
+
+Die genaue Zuordnung dieser Ursachen zu spezifischen Prozessschritten erfordert detaillierte Prozessdaten, die in den bereitgestellten Daten nicht vorhanden sind. Es wäre ratsam, die Prozessschritte im Detail zu überprüfen, um die genauen Engpässe und mögliche Verbesserungsbereiche zu identifizieren.
