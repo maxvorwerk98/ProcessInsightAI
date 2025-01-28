@@ -6,7 +6,7 @@ input/data_hospital-sepsis-process.xes
 venv/
 
 # Ignore Config
-config
+config/
 
 # Ignore Caches
 __pycache__/
