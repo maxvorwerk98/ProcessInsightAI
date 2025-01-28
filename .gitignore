@@ -5,5 +5,8 @@ input/data_hospital-sepsis-process.xes
 # Ignore Python virtual environment
 venv/
 
+# Ignore Config
+config
+
 # Ignore Caches
 __pycache__/
