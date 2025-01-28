@@ -8,6 +8,8 @@ import pm4py
 from openai import OpenAI
 from dotenv import load_dotenv
 
+from src.chat_manager import load_conversation_history, save_conversation_history
+
 #-----------------------------------------------------------------------------
 # Config
 #-----------------------------------------------------------------------------
@@ -30,15 +32,21 @@ def process_performance(event_logs):
 
         user_performance_prompt = user_performance_prompt.replace("<<DFG>>", pm4py.llm.abstract_dfg(event_logs))
 
+        messages = load_conversation_history()
+        messages.append({"role": "user", "content": user_performance_prompt})
+
         response = client.chat.completions.create(
             model=model_name,
-            messages=[
-                {"role": "user", "content": user_performance_prompt}
-            ]
+            messages=messages
         )
 
+        result = response.choices[0].message.content
+        
+        messages.append({"role": "assistant", "content": result})
+        save_conversation_history(messages)
+
         with open("output/process_performance_output.txt", "w", encoding="utf-8") as file:
-            file.write(response.choices[0].message.content)
+            file.write(result)
 
     except Exception as exception:
         print(f"Ein unerwarteter Fehler ist aufgetreten: {exception}")

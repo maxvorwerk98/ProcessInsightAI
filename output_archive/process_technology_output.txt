@@ -1,0 +1,24 @@
+- Schwachstelle: Bearbeitungszeit
+
+Technologie: **Prozessautomatisierungstechnologien** wie RPA (Robotic Process Automation) und BPM (Business Process Management) Tools
+Optimierungspotenzial: Diese Tools können genutzt werden, um manuelle, zeitintensive Aufgaben zu automatisieren und somit die Prozessdurchlaufzeit zu minimieren.
+
+- Schwachstelle: Abhängigkeiten zwischen Events
+
+Technologie: **Parallelverarbeitungssysteme** und Tools zur **Geschäftsprozessteuerung**
+Optimierungspotenzial: Diese Systeme können die Interdependenzen zwischen verschiedenen Prozessen erkennen und können dazu beitragen, diese Prozesse parallel zu organisieren, um die Gesamtbearbeitungszeit zu reduzieren.
+
+- Schwachstelle: Hohe Schadensformularwerte
+
+Technologie: **Künstliche Intelligenz (KI)-basierte Schadensteuerungssysteme**
+Optimierungspotenzial: Mit dem Einsatz von künstlicher Intelligenz könnten komplizierte und hohe Schadensaufwände schneller bewältigt werden. Diese Systeme könnten assistieren in Fallbewertung, Entscheidungsfindung und schließlich der beschleunigten Bearbeitung der Fälle mit hohen Schadensansprüchen.
+
+- Schwachstelle: Nutzerunterstützung
+
+Technologie: **RPA (Robotic Process Automation) und NLP (Natural Language Processing) Tools**
+Optimierungspotenzial: Durch den verstärkten Einsatz von RPA für sich wiederholende und einfache Aufgaben könnten menschliche Nutzer entlastet werden. NLP könnte zur Bot-Kommunikation genutzt werden, um einfache Anfragen zu beantworten und menschliche Nutzer zu unterstützen, wodurch die Bearbeitungsdauer reduziert wird. 
+
+- Schwachstelle: Menschliche Nutzer benötigen mehr Bearbeitungszeit als automatisierte Prozesse
+
+Technologie: **Schulungen und Workshops** zu Technologien wie RPA 
+Optimierungspotenzial: Durch den gezielten Einsatz von Schulungen zu Technologiegesteuerten Prozessen könnten menschliche Nutzer effizienter in den Arbeitsabläufen werden und damit die Bearbeitungszeit reduzieren.

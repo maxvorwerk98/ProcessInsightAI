@@ -1,0 +1,28 @@
+**Ergebnis:**
+
+1. Übergang: "First Notification of Loss (FNOL)" -> "Assign Claim"
+   - Durchschnittliche Durchlaufzeit (Performance): ca. 360 Stunden (1296891.342 Sekunden)
+   - Häufigkeit (Frequency): 29807
+   - Bewertung: Potenzieller Engpass, da sowohl die Performance als auch die Frequency sehr hoch sind.
+
+2. Übergang: "First Notification of Loss (FNOL)" -> "Claim Decision"
+   - Durchschnittliche Durchlaufzeit (Performance): ca. 346 Stunden (1245436.515 Sekunden)
+   - Häufigkeit (Frequency): 192
+   - Bewertung: Unwahrscheinlich ein Engpass, obwohl die Performance hoch ist, ist die Frequency im Vergleich niedrig.
+
+3. Übergang: "Assign Claim" -> "Set Reserve"
+   - Durchschnittliche Durchlaufzeit (Performance): ca. 107 Stunden (386439.716 Sekunden)
+   - Häufigkeit (Frequency): 371
+   - Bewertung: Unwahrscheinlich ein Engpass wegen der relativ geringen Frequency, obwohl die Performance hoch ist.
+
+4. Übergang: "Set Reserve" -> "Close Claim"
+   - Durchschnittliche Durchlaufzeit (Performance): ca. 108 Stunden (388790.563 Sekunden)
+   - Häufigkeit (Frequency): 359
+   - Bewertung: Unwahrscheinlich ein Engpass wegen der relativ geringen Frequency, obwohl die Performance hoch ist.
+
+5. Übergang: "Claim Decision" -> "Payment Sent"
+   - Durchschnittliche Durchlaufzeit (Performance): ca. 109 Stunden (392281.819 Sekunden)
+   - Häufigkeit (Frequency): 358
+   - Bewertung: Unwahrscheinlich ein Engpass wegen der relativ geringen Frequency, obwohl die Performance hoch ist. 
+
+Es ist zu beachten, dass das Identifizieren von Engpässen auch von anderen Faktoren abhängt, wie z.B. der kritischen Relevanz einer Prozessstufe. Ein Prozess mit hoher Performance und niedriger Frequenz kann dennoch eine Engpass darstellen, wenn er z.B. für den Abschluss eines Projekts kritisch ist. Ebenso kann ein Prozess mit niedriger Performance und hoher Frequenz keine Engpässe darstellen, wenn er leicht parallelisiert oder in Reserve gehalten werden kann.

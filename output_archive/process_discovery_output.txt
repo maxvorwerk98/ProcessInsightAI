@@ -1,0 +1,25 @@
+Ohne weitere Informationen oder Daten über die Häufigkeit der Aktivitäten und Übergänge kann der "Happy-Path" basierend auf dem gegebenen Petri-Netz nicht eindeutig identifiziert werden. 
+
+Wenn wir jedoch unter der Annahme handeln, dass der einfachste Weg durch das Netz der Happy-Path ist, würde dies wie folgt aussehen:
+
+**Happy-Path:** "First Notification of Loss (FNOL)" -> "Assign Claim" -> "Close Claim" 
+
+Dabei verläuft der Prozess wie folgt: 
+
+1. Es beginnt mit einem Vorfall, der zu einem Verlust führt ("First Notification of Loss (FNOL)"), der von der Quelle ("source") aus gestartet wird und zu den Plätzen p_11, p_13, p_4 und p_6 führt. 
+
+2. Danach wird der Anspruch zugewiesen ("Assign Claim"), was von p_13 ausgeht und zu p_14 führt. 
+
+3. Schließlich wird der Anspruch geschlossen ("Close Claim"), was von den Plätzen p_12 und p_14 ausgeht und zu p_9 führt, das zum Senkenpunkt ("sink") führt. 
+
+**Bedingungen:** 
+
+Um diesen Ablauf zu durchlaufen, müssen folgende Übergänge und Zustände erfolgen:
+
+- Der Übergang "First Notification of Loss (FNOL)" muss ausgeführt werden, um die Zustände p_11, p_13, p_4 und p_6 zu erreichen.
+- Der Zustand p_13 muss erreicht sein, um den Übergang "Assign Claim" auszuführen.
+- Der Zustand p_14 muss erreicht sein, um den Übergang "Close Claim" auszuführen.
+- Der Übergang "Close Claim" muss ausgeführt werden, um den Zustand p_9 zu erreichen.
+- Der Zustand p_9 muss erreicht sein, um den endgültigen Zustand "sink" zu erreichen.
+
+Hinweis: Dies ist eine abstrakte und vereinfachte Darstellung des Prozesses. In einem realen Szenario könnten weitere Aktivitäten, Übergänge und Zustände notwendig sein.

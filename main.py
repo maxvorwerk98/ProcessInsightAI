@@ -13,6 +13,7 @@
 # Import
 #-----------------------------------------------------------------------------
 
+from src.chat_manager import clear_conversation_history
 from src.process_input import load_event_logs
 from src.process_discovery import process_discovery
 from src.process_performance import process_performance
@@ -24,6 +25,8 @@ from src.process_technology import process_technology
 #-----------------------------------------------------------------------------
 
 def main():
+
+    clear_conversation_history()
 
     file_path = "input/data_claim_process.xes"
 
