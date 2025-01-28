@@ -1,26 +1,28 @@
+**Ergebnis:**
+
 1. Übergang: First Notification of Loss (FNOL) -> Assign Claim
-   - Durchschnittliche Durchlaufzeit (performance): Ca. 360 Stunden
-   - Häufigkeit (frequency): 29807
-   - Bewertung: Potentieller Engpass, da dieser Schritt mit der höchsten Frequenz und sehr hoher Durchlaufzeit auftritt. Dieser Schritt könnte durch eine Optimierung des Prozesses beschleunigt werden.
+     - Durchschnittliche Durchlaufzeit (performance): ca. 360 Stunden
+     - Häufigkeit (frequency): 29807
+     - Bewertung: Möglicher Engpass, da dieser Übergang sowohl eine hohe Durchlaufzeit als auch eine hohe Frequenz aufweist. Dies ist der erste Schritt des Prozesses, was bedeutet, dass Verzögerungen hier zu Verzögerungen in allen nachfolgenden Schritten führen können.
 
 2. Übergang: First Notification of Loss (FNOL) -> Claim Decision
-   - Durchschnittliche Durchlaufzeit (performance): Ca. 346 Stunden
-   - Häufigkeit (frequency): 192 
-   - Bewertung: Kein wahrscheinlicher Engpass, da die Frequenz sehr niedrig ist, obwohl die Durchlaufzeit hoch ist.
+     - Durchschnittliche Durchlaufzeit (performance): ca. 346 Stunden
+     - Häufigkeit (frequency): 192
+     - Bewertung: Wahrscheinlich kein Engpass, obwohl die Durchlaufzeit hoch ist, ist die Frequenz sehr niedrig. Dieser Übergang tritt also relativ selten auf.
 
-3. Übergang: First Notification of Loss (FNOL) -> Set Reserve
-   - Durchschnittliche Durchlaufzeit (performance): Ca. 355 Stunden
-   - Häufigkeit (frequency): 1
-   - Bewertung: Kein wahrscheinlicher Engpass, da die Frequenz extrem niedrig ist, obwohl die Durchlaufzeit hoch ist.
+3. Übergang: First Notification of Loss (FNOL) -> Set Reserve 
+     - Durchschnittliche Durchlaufzeit (performance): ca. 355 Stunden
+     - Häufigkeit (frequency): 1
+     - Bewertung: Kein Engpass, da dieser Übergang trotz der hohen Durchlaufzeit extrem selten ist.
 
 4. Übergang: Assign Claim -> Claim Decision
-   - Durchschnittliche Durchlaufzeit (performance): Ca. 121 Stunden
-   - Häufigkeit (frequency): 29621
-   - Bewertung: Potentieller Engpass, da dieser Schritt mit sehr hoher Frequenz und relativ hoher Durchlaufzeit auftritt. 
+     - Durchschnittliche Durchlaufzeit (performance): ca. 121 Stunden
+     - Häufigkeit (frequency): 29621
+     - Bewertung: Potentieller Engpass, da dieser Übergang eine hohe Frequenz und eine beachtliche Durchlaufzeit hat. Falls es hier Verzögerungen gibt, kann das die nachfolgenden Schritte beeinflussen. 
 
 5. Übergang: Claim Decision -> Set Reserve
-   - Durchschnittliche Durchlaufzeit (performance): Ca. 121 Stunden
-   - Häufigkeit (frequency): 29444
-   - Bewertung: Potentieller Engpass, da dieser Schritt mit sehr hoher Frequenz und relativ hoher Durchlaufzeit auftritt. 
+     - Durchschnittliche Durchlaufzeit (performance): ca. 121 Stunden
+     - Häufigkeit (frequency): 29444
+     - Bewertung: Potentieller Engpass, ähnlich dem vorherigen Übergang. Ein hoher Wert für Durchlaufzeit und Frequenz.
 
-Bitte beachten Sie, dass die durchschnittlichen Durchlaufzeitangaben gerundet sind und auf der Annahme basieren, dass 1 Sekunde = 1/3600 Stunden ist. Weitere Analyse und Prozessverbesserungen können erforderlich sein, um diese potentiellen Engpässe vollständig zu addressieren.
+Die Durchschnittliche Durchlaufzeiten (Performance) wurden für die Anschaulichkeit in Stunden umgewandelt (angenommen, die angegebenen Werte sind in Sekunden).

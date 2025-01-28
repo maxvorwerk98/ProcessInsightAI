@@ -1,12 +1,5 @@
-Happy-Path: 
+**Ergebnis:**
 
-1. First Notification of Loss (FNOL) 
-2. Assign Claim 
-3. Claim Decision 
-4. Set Reserve 
-5. Payment Sent 
-6. Close Claim
+- Happy-Path: First Notification of Loss (FNOL) -> Assign Claim -> Claim Decision -> Set Reserve -> Payment Sent -> Close Claim 
 
-Beschreibung des Ablaufs: 
-
-Nach dem ersten Verlustmeldungs-Ereignis (First Notification of Loss - FNOL) wird der Anspruch zugewiesen (Assign Claim), was am häufigsten vorkommt im Prozess. Daraufhin wird eine Entscheidung über den Anspruch getroffen (Claim Decision). Nachdem die Entscheidung gefällt ist, wird eine Rückstellung gesetzt (Set Reserve). Sobald die Rückstellung gesetzt ist, wird die Zahlung versendet (Payment Sent). Abschließend wird der Anspruch geschlossen (Close Claim). Dieser Ablauf wiederholt sich am häufigsten und stellt den Hauptprozesspfad (Happy-Path) dar.
+Nach der ersten Schadensmeldung (FNOL) wird der Schadensfall zugewiesen. Anschließend wird eine Entscheidung zum Schadensfall getroffen. Danach wird ein Reservebetrag festgelegt. Im nächsten Schritt wird die Zahlung gesendet und schließlich wird der Schadensfall geschlossen.
