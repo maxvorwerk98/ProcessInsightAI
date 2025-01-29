@@ -1,12 +1,5 @@
-Aufgrund der vorgegebenen Frequenzen der Aktivitäten im Directly-Follows-Graphen ergibt sich folgender Happy-Path im Bezug auf den Schadensprozess:
+Der Happy-Path des analysierten Prozesses ist wie folgt:
 
-- Happy-Path: First Notification of Loss (FNOL) -> Assign Claim -> Claim Decision -> Set Reserve -> Payment Sent -> Close Claim
+First Notification of Loss (FNOL) -> Assign Claim -> Claim Decision -> Set Reserve -> Payment Sent -> Close Claim
 
-Das bedeutet also, dass die am häufigsten vorkommende Reihenfolge von Aktivitäten in diesem Prozess wie folgt aussieht: 
-
-1. Zuerst wird der Schaden oder der Verlust zum ersten Mal gemeldet (First Notification of Loss (FNOL)).
-2. Anschließend wird der Schadenfall zugewiesen (Assign Claim).
-3. Dann wird eine Entscheidung über den Schadenfall getroffen (Claim Decision).
-4. Danach wird die Reserve gesetzt (Set Reserve).
-5. Nach der Reservierung wird die Zahlung gesendet (Payment Sent).
-6. Schließlich wird der Schadenfall geschlossen (Close Claim).
+Dieser Ablauf kann wie folgt beschrieben werden: Zunächst wird ein Verlust seitens des Kunden gemeldet (First Notification of Loss). Diese Meldung wird anschließend einem Sachbearbeiter zugewiesen (Assign Claim). Auf Basis der vorliegenden Informationen trifft der Sachbearbeiter eine Entscheidung bezüglich des Anspruchs (Claim Decision). Danach wird ein Reservekontingent eingestellt (Set Reserve). Sobald das genehmigt ist, erfolgt die Zahlungsabwicklung (Payment Sent). Sobald die Zahlung gesendet wurde, wird der Anspruch geschlossen (Close Claim).

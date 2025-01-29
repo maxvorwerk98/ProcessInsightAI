@@ -1,6 +1,5 @@
-# Ignore large files
-input/data_claim_process.xes
-input/data_hospital-sepsis-process.xes
+# Ignore Input-Files
+input/
 
 # Ignore Python virtual environment
 venv/

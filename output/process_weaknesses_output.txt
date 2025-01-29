@@ -1,11 +1,15 @@
-Basierend auf den bereitgestellten Daten ergeben sich folgende mögliche Ursachen für die langen Durchlaufzeiten:
+Basierend auf den bereitgestellten Daten sind folgende Punkte als potenzielle Ursachen für die langen Durchlaufzeiten im Prozess zu erkennen:
 
-1. Ursache: Es gibt einen starken Unterschied in der Anzahl der Aktivitäten, die von Menschen und von RPA (Robotic Process Automation) ausgeführt werden. Menschliche Bearbeitung hat insgesamt eine höhere Frequenz (19400 Ereignisse) im Vergleich zur RPA (10600 Ereignisse). Menschliche Bearbeitung könnte langsamer sein und zu längeren Durchlaufzeiten führen.
+1. Ursache: Hohe Bearbeitungszeit beim Zuweisen der Ansprüche
+   - Erklärung: Der Übergang von "First Notification of Loss" zu "Assign Claim" hat eine hohe Durchlaufzeit. Dies deutet darauf hin, dass der Prozess der Zuweisung von Ansprüchen zeitintensiv ist und möglicherweise optimiert werden könnte.
+   
+2. Ursache: Längere Entscheidungszeit im Anspruchsprozess
+   - Erklärung: Der Übergang von "Assign Claim" zu "Claim Decision" hat ebenfalls eine hohe Durchlaufzeit. Das trifft auch auf den Übergang von "Claim Decision" zu "Set Reserve" zu. Das deutet vielleicht darauf hin, dass es zu lange dauert, um eine Entscheidung über den Anspruch zu treffen und eine Reserve festzulegen.
 
-2. Ursache: Die Höhe des geltend gemachten Schadens ('claim_amount') könnte ebenfalls eine Rolle spielen. Höhere Schadenshöhen könnten eine sorgfältigere Überprüfung und damit längere Durchlaufzeiten erfordern.
+3. Ursache: Hohe Anspruchssummen
+   - Erklärung: Die Daten zeigen, dass die Anspruchssummen recht hoch sind. Höhere Anspruchssummen können dazu führen, dass mehr Zeit für die Prüfung und Bearbeitung benötigt wird.
 
-3. Ursache: Das Alter des Antragstellers ('claimant_age') und das Alter des Autos ('car_year') könnten auf ein komplexeres Schadensbild hinweisen oder zusätzliche Überprüfungen verlangen, was ebenfalls zu längeren Durchlaufzeiten führen kann. 
+4. Ursache: Hoher Anteil menschlicher Nutzer
+   - Erklärung: Die Daten zeigen, dass fast 65% der Nutzer Menschen sind (im Gegensatz zu Robotic Process Automation, RPA). Menschliche Nutzer können länger brauchen, um Aufgaben zu erledigen, insbesondere wenn sie komplex sind oder spezifisches Fachwissen erfordern.
 
-4. Ursache: Der Typ der Versicherungspolice ('type_of_policy') und der Typ des Unfalls ('type_of_accident') könnten ebenfalls einen Einfluss auf die Durchlaufzeit haben. Bestimmte Policentypen oder Unfalltypen könnten komplexere Prozesse erfordern, die mehr Zeit in Anspruch nehmen.
-
-Bitte beachten Sie, dass dies Hypothesen sind und eine detaillierte statistische Analyse oder eine tiefergehende Prozessanalyse erforderlich wäre, um diese Hypothesen zu bestätigen.
+Die genaue Ursache hängt von vielen Faktoren ab und kann nur durch eine detaillierte Analyse der Abläufe, Systeme und Mitarbeiterkompetenzen ermittelt werden. Diese Liste bietet jedoch einen guten Ausgangspunkt für eine solche Analyse.
