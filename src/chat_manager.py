@@ -10,7 +10,7 @@ import json
 
 def clear_conversation_history():
 
-    history = [{"role": "system", "content": "Du bist ein KI-gestütztes Prozessanalyse-Tool."}]
+    history = [{"role": "developer", "content": "Du bist ein KI-gestütztes Prozessanalyse-Tool."}]
 
     with open("output/conversation_history.json", "w", encoding="utf-8") as file:
         json.dump(history, file, ensure_ascii=False, indent=4)
