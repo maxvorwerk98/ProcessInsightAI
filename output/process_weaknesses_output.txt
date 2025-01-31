@@ -1,15 +1,13 @@
-Basierend auf den bereitgestellten Daten sind folgende Punkte als potenzielle Ursachen für die langen Durchlaufzeiten im Prozess zu erkennen:
+Die Analyse der event logs gibt keine spezifische Information darüber, welches Event-Attribut zu längeren Durchlaufzeiten führen könnte. Alle Event-Attribute weisen eine Frequenz von 30000 auf, was darauf hindeutet, dass sie alle gleich häufig vorkommen. Jedoch können aufgrund der dargebotenen Informationen folgende Faktoren angenommen werden, die zu längeren Durchlaufzeiten führen könnten:
 
-1. Ursache: Hohe Bearbeitungszeit beim Zuweisen der Ansprüche
-   - Erklärung: Der Übergang von "First Notification of Loss" zu "Assign Claim" hat eine hohe Durchlaufzeit. Dies deutet darauf hin, dass der Prozess der Zuweisung von Ansprüchen zeitintensiv ist und möglicherweise optimiert werden könnte.
+1. **Ursache**: Hohe Schadenshöhe (claim_amount):
+   - Die Verteilung der Schadenshöhe mit Werten bis zu fast 10.000 könnte ein Indikator dafür sein, dass Fälle mit höherem Schadenswert mehr Zeit in der Bearbeitung benötigen, da sie wahrscheinlich komplexer sind und mehr Bearbeitungschritte benötigen.
+
+2. **Ursache**: Alter der Anspruchsteller (claimant_age):
+   - Die Altersverteilung zeigt, dass das Alter bis zu 85 Jahre variiert. Ältere Anspruchsteller könnten möglicherweise mehr Zeit für die Abwicklung ihrer Schadensfälle benötigen, z. B. aufgrund von Kommunikationsschwierigkeiten oder nicht-digitalen Interaktionsmodellen.
+
+3. **Ursache**: Alte Fahrzeuge (car_year):
+   - Die Daten zeigen, dass Fahrzeuge im Prozess bis zu 12 Jahre alt sein können. Es könnte sein, dass ältere Fahrzeuge zu komplexeren Schadensfällen führen, z. B. aufgrund von Schwierigkeiten bei der Ersatzteilbeschaffung oder höherem Reparaturaufwand.
    
-2. Ursache: Längere Entscheidungszeit im Anspruchsprozess
-   - Erklärung: Der Übergang von "Assign Claim" zu "Claim Decision" hat ebenfalls eine hohe Durchlaufzeit. Das trifft auch auf den Übergang von "Claim Decision" zu "Set Reserve" zu. Das deutet vielleicht darauf hin, dass es zu lange dauert, um eine Entscheidung über den Anspruch zu treffen und eine Reserve festzulegen.
-
-3. Ursache: Hohe Anspruchssummen
-   - Erklärung: Die Daten zeigen, dass die Anspruchssummen recht hoch sind. Höhere Anspruchssummen können dazu führen, dass mehr Zeit für die Prüfung und Bearbeitung benötigt wird.
-
-4. Ursache: Hoher Anteil menschlicher Nutzer
-   - Erklärung: Die Daten zeigen, dass fast 65% der Nutzer Menschen sind (im Gegensatz zu Robotic Process Automation, RPA). Menschliche Nutzer können länger brauchen, um Aufgaben zu erledigen, insbesondere wenn sie komplex sind oder spezifisches Fachwissen erfordern.
-
-Die genaue Ursache hängt von vielen Faktoren ab und kann nur durch eine detaillierte Analyse der Abläufe, Systeme und Mitarbeiterkompetenzen ermittelt werden. Diese Liste bietet jedoch einen guten Ausgangspunkt für eine solche Analyse.
+4. **Ursache**: User Type - Human
+   - Von insgesamt 30.000 Schadenfällen werden 19.400 von Menschen bearbeitet. Es könnte sein, dass menschliche Bearbeiter länger für die Schadenregulierung benötigen als ihre Robotic Process Automation (RPA) Kollegen, was zu längeren Durchlaufzeiten führen kann.
