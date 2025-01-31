@@ -9,7 +9,7 @@ Bitte analysiere basierend auf dem folgendem Directly-Follows-Graph die durschni
 <<DFG>>
 
 **Aufgabe:**
-1. Identifiziere die 5 Übergänge mit den höchsten Performance-Werten.
+1. Identifiziere die drei Übergänge mit den höchsten Performance-Werten.
 2. Bewerte, ob diese Übergänge potenzielle Engpässe im Prozess darstellen. Berücksichtige die Frequency und die relative Position im Prozess. Ein Übergang mit hoher Performance und gleichzeitig hoher Frequency ist wahrscheinlicher ein Engpass als ein Übergang, der selten auftritt.
 
 **Ergebnisformat**

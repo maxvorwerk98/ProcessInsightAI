@@ -1,0 +1,15 @@
+Basierend auf den bereitgestellten Daten sind folgende Punkte als potenzielle Ursachen für die langen Durchlaufzeiten im Prozess zu erkennen:
+
+1. Ursache: Hohe Bearbeitungszeit beim Zuweisen der Ansprüche
+   - Erklärung: Der Übergang von "First Notification of Loss" zu "Assign Claim" hat eine hohe Durchlaufzeit. Dies deutet darauf hin, dass der Prozess der Zuweisung von Ansprüchen zeitintensiv ist und möglicherweise optimiert werden könnte.
+   
+2. Ursache: Längere Entscheidungszeit im Anspruchsprozess
+   - Erklärung: Der Übergang von "Assign Claim" zu "Claim Decision" hat ebenfalls eine hohe Durchlaufzeit. Das trifft auch auf den Übergang von "Claim Decision" zu "Set Reserve" zu. Das deutet vielleicht darauf hin, dass es zu lange dauert, um eine Entscheidung über den Anspruch zu treffen und eine Reserve festzulegen.
+
+3. Ursache: Hohe Anspruchssummen
+   - Erklärung: Die Daten zeigen, dass die Anspruchssummen recht hoch sind. Höhere Anspruchssummen können dazu führen, dass mehr Zeit für die Prüfung und Bearbeitung benötigt wird.
+
+4. Ursache: Hoher Anteil menschlicher Nutzer
+   - Erklärung: Die Daten zeigen, dass fast 65% der Nutzer Menschen sind (im Gegensatz zu Robotic Process Automation, RPA). Menschliche Nutzer können länger brauchen, um Aufgaben zu erledigen, insbesondere wenn sie komplex sind oder spezifisches Fachwissen erfordern.
+
+Die genaue Ursache hängt von vielen Faktoren ab und kann nur durch eine detaillierte Analyse der Abläufe, Systeme und Mitarbeiterkompetenzen ermittelt werden. Diese Liste bietet jedoch einen guten Ausgangspunkt für eine solche Analyse.

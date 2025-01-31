@@ -1,0 +1,5 @@
+Der Happy-Path des analysierten Prozesses ist wie folgt:
+
+First Notification of Loss (FNOL) -> Assign Claim -> Claim Decision -> Set Reserve -> Payment Sent -> Close Claim
+
+Dieser Ablauf kann wie folgt beschrieben werden: Zunächst wird ein Verlust seitens des Kunden gemeldet (First Notification of Loss). Diese Meldung wird anschließend einem Sachbearbeiter zugewiesen (Assign Claim). Auf Basis der vorliegenden Informationen trifft der Sachbearbeiter eine Entscheidung bezüglich des Anspruchs (Claim Decision). Danach wird ein Reservekontingent eingestellt (Set Reserve). Sobald das genehmigt ist, erfolgt die Zahlungsabwicklung (Payment Sent). Sobald die Zahlung gesendet wurde, wird der Anspruch geschlossen (Close Claim).

@@ -5,7 +5,7 @@ Bitte beschreibe basierend auf dem folgenden Directly-Follows-Graph den häufigs
 
 **Aufgabe:**
 1. Identifiziere den Happy-Path des Prozesses, also die am häufigsten vorkommende Reihenfolge von Aktivitäten.  
-2. Beschreibe den Ablauf des Happy-Path ohne auf alternative Varianten einzugehen.  
+2. Beschreibe kurz den Ablauf des Happy-Path.  
 
 **Ergebnisformat:**
 - Happy-Path: Kurzbeschreibung des häufigsten Prozessablaufs, z. B. "Aktivität A -> Aktivität B -> Aktivität C".  
