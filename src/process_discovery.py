@@ -21,7 +21,21 @@ client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 model_name = "gpt-4"
 
 #-----------------------------------------------------------------------------
-# Process Discovery Analysis
+# Führt eine grundlegende Prozessanalyse durch, um den Happy-Path des Prozesses zu identifizieren.
+#
+# Ablauf:
+# - Lädt Prompt aus einer Datei
+# - Ersetzt Platzhalter im Prompt mit abstrahierter Darstellung des Prozesses
+# - Lädt bestehende Konversationshistorie und fügt die aktuelle Anfrage hinzu
+# - Sendet die Anfrage an das LLM 
+# - Speichert Antwort in der Konversationshistorie und in einer Datei
+# - Fehlerhandling für unerwartete Fehler.
+#
+# Parameter:
+# - event_logs: Prozessdaten in Form von Event-Logs
+#
+# Rückgabe:
+# - Keine Rückgabe
 #-----------------------------------------------------------------------------
 
 def process_discovery(event_logs):

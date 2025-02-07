@@ -1,7 +1,10 @@
-# InsightProcessAI
-ProcessInsightAI is an LLM-powered tool designed to analyze processes based on real process data in the form of event logs. Using these event logs, the tool  performs a four-stage technology analysis, divided into the following phases:
+# ProcessInsightAI
+Das Tool "ProcessInsightAI" ist teild er Bachelorarbeit "Evaluierung von Large Language Models zur Prozessanalyse" und wurde im Kontext dieser Arbeit entwickelt.
 
-- Process Discovery: Fundamental analysis to identify the process structure and key process steps.
-- Performance Analysis: Examination of the process to identify delays and bottlenecks affecting performance.
-- Weakness Analysis: Investigation of the root causes of previously identified anomalies.
-- Technology Analysis: Evaluation of suitable technologies to address the identified anomalies.
+ProcessInsightAI ist ein LLM-gestütztes Tool zur Analyse von Prozessen auf Basis realer Prozessdaten, die in Form von Event-Logs vorliegen. 
+Dabei führt "ProcessInsightAI" eine vierstufige Technologieanalyse durch, die in fol-gende Phasen unterteilt ist:
+ 
+    - Process Discovery: Grundlegende Analyse zur Erkennung der Prozessstruktur und der wesentlichen Prozessschritte.
+    - Process Performance: Analyse des Prozesses zur Identifikation von Verzögerun-gen und Engpässen, die die Leistung beeinträchtigen.
+    - Process Weaknesses: Analyse der Ursachen für die zuvor identifizierten Ano-malien.
+    - Process Technology: Evaluation geeigneter Technologien, um die zuvor identifi-zierten Anomalien zu beheben.

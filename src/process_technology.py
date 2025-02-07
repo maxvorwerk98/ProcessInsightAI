@@ -21,7 +21,23 @@ client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 model_name = "gpt-4"
 
 #-----------------------------------------------------------------------------
-# Process Technology Analysis
+# Führt eine Technologieanalyse durch, um Technologien oder Maßnahmen zu 
+# evaluieren, um die zuvor identifizierten Schwachstellen zu adressieren.
+#
+# Ablauf:
+# - Lädt Prompt aus einer Datei
+# - Lädt zuvor ermittelten Schwachstellen aus einer Datei
+# - Ersetzt Platzhalter im Prompt mit Schwachstellen
+# - Lädt bestehende Konversationshistorie und fügt die aktuelle Anfrage hinzu
+# - Sendet die Anfrage an das LLM 
+# - Speichert Antwort in der Konversationshistorie und in einer Datei
+# - Fehlerhandling für unerwartete Fehler.
+#
+# Parameter:
+# - event_logs: Prozessdaten in Form von Event-Logs
+#
+# Rückgabe:
+# - Keine Rückgabe
 #-----------------------------------------------------------------------------
 
 def process_technology(event_logs):

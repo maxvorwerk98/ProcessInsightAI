@@ -21,7 +21,22 @@ client = OpenAI(api_key= os.getenv("OPENAI_API_KEY"))
 model_name = "gpt-4"
 
 #-----------------------------------------------------------------------------
-# Process Weaknesses Analysis
+# Führt eine Schwachstellenanalyse durch, um die möglichen Ursachen für die 
+# langen Durchlaufzeiten ermitteln.
+#
+# Ablauf:
+# - Lädt Prompt aus einer Datei
+# - Ersetzt Platzhalter im Prompt mit abstrahierten Darstellungen des Prozesses
+# - Lädt bestehende Konversationshistorie und fügt die aktuelle Anfrage hinzu
+# - Sendet die Anfrage an das LLM 
+# - Speichert Antwort in der Konversationshistorie und in einer Datei
+# - Fehlerhandling für unerwartete Fehler.
+#
+# Parameter:
+# - event_logs: Prozessdaten in Form von Event-Logs
+#
+# Rückgabe:
+# - Keine Rückgabe
 #-----------------------------------------------------------------------------
 
 def process_weaknesses(event_logs):

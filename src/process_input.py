@@ -5,7 +5,13 @@
 import pm4py
 
 #-----------------------------------------------------------------------------
-# Load Event-Logs
+# Lädt die Event-Logs aus einer XES-Datei.
+#
+# Parameter:
+# - file_path: Pfad zur XES-Datei
+#
+# Rückgabe:
+# - event_logs: Prozessdaten in Form von Event-Logs
 #-----------------------------------------------------------------------------
 
 def load_event_logs(file_path):
